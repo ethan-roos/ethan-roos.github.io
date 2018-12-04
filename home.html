@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ethan Roos</title>
+				<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Quando|" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript" src="d3.v4.js"></script>
+
+</head>
+<body onresize="resizeFunction()">
+	<div class="voron">
+		<script type="text/javascript">
+			voron();
+			function voron(){
+				//console.log(window.innerWidth);
+				var startcol = "rgb(210, 208, 216)";
+
+				var svgtest = d3.select("body").select("div.voron").select("svg");
+				if (!svgtest.empty()){
+					svgtest.remove();
+				}
+				var width = window.innerWidth;
+				var height = window.innerHeight;
+				//  var vertices = d3.range(100).map(function(d){ return [Math.random()*width,Math.random()*height]; });
+				var vertices = d3.range(10000).map(function(d){
+					return [Math.random()*width,Math.random()*height]; });
+				//console.log(vertices);
+
+				var voronoi = d3.voronoi().size([width,height]);
+				var svg = d3.select("div.voron").append("svg").attr("width","100%").attr("height","100%");
+
+				svg.append("g").attr("class","polygons")
+						.selectAll("path")
+						.data(voronoi.polygons(vertices))
+						.enter().append("path")
+								.attr("d", function(d){ return "M"+d.join("L")+"z"})
+								.style("fill",startcol)
+								.style("stroke",startcol)
+					//      .on("mousemove", function(){this.style.fill = "lightsteelblue";})
+								.on("mousemove", function(d){
+
+									if (this.style.fill == startcol){
+										//colour picker
+
+										var colnumb = Math.floor(Math.random() * 6);
+										var mossfill = '';
+										switch (colnumb) {
+											case 1:
+												mossfill = '#baefa0';
+												break;
+											case 2:
+												mossfill = '#ceefa0';
+												break;
+											case 3:
+												mossfill = '#87c170';
+												break;
+											case 4:
+												mossfill = '#b3e5c8';
+												break;
+											case 5:
+												mossfill = '#6bc657';
+												break;
+
+											default:
+												mossfill = '#438734';
+
+										}
+										this.style.fill = mossfill;
+										this.style.stroke = mossfill;
+									}
+								})
+			}
+
+		</script>
+	</div>
+
+
+	<div id="trees" class="trees"></div>
+
+	<div class="name-box">
+		<h1>Ethan Roos</h1>
+	</div>
+	<div >
+		<svg id='menIcon' onclick="menu()" version="1.1" width=100% height= 100% xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 206 229"  xml:space="preserve">
+		<style type="text/css">
+			.st0{fill:#B3E5C8;}
+			.st1{fill:#BAEFA0;}
+			.st2{fill:#CEEFA0;}
+			.st3{fill:#438734;}
+			.st4{fill:#87C170;}
+			.st5{fill:#FFFFFF;}
+			.st6{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+		</style>
+		<g id="Layer_1">
+			<polygon class="st0" points="109.5,85.5 157.5,78.5 156.23,77.26 113.02,34.97 	"/>
+			<polygon class="st1" points="182.5,57.5 157.5,78.5 169.5,90.5 192.5,83.5 	"/>
+			<polygon class="st2" points="150.5,26.5 136.73,29.48 113.5,34.5 157.5,78.5 182.5,57.5 	"/>
+			<polygon class="st3" points="169.5,112.5 169.5,90.5 157.5,78.5 109.5,85.5 	"/>
+			<polygon class="st2" points="113.5,6.5 113.5,34.5 109.5,85.5 94.5,27.5 	"/>
+			<polygon class="st3" points="113.5,6.5 136.5,29.5 113.5,34.5 	"/>
+			<polygon class="st4" points="182.5,57.5 184.5,37.5 168.32,43.6 	"/>
+			<polygon class="st1" points="73.5,184.5 65.5,210.5 80.5,218.5 95.5,210.5 86.5,186.5 	"/>
+			<polygon class="st4" points="107.5,201.5 86.5,186.5 112.5,181.5 	"/>
+			<polygon class="st0" points="19.5,83.5 7.5,96.5 8.5,115.5 20.5,122.5 	"/>
+		</g>
+		<g id="Layer_2">
+			<g>
+				<path class="st5" d="M26,195c-5.51,0-10-4.49-10-10V69c0-5.51,4.49-10,10-10h116c5.51,0,10,4.49,10,10v116c0,5.51-4.49,10-10,10
+					H26z"/>
+				<path d="M142,61c4.41,0,8,3.59,8,8v116c0,4.41-3.59,8-8,8H26c-4.41,0-8-3.59-8-8V69c0-4.41,3.59-8,8-8H142 M142,57H26
+					c-6.6,0-12,5.4-12,12v116c0,6.6,5.4,12,12,12h116c6.6,0,12-5.4,12-12V69C154,62.4,148.6,57,142,57L142,57z"/>
+			</g>
+			<g>
+				<line class="st6" x1="35" y1="101.5" x2="132" y2="101.5"/>
+			</g>
+			<g>
+				<line class="st6" x1="35" y1="148.5" x2="132" y2="148.5"/>
+			</g>
+			<g>
+				<line class="st6" x1="35" y1="125.5" x2="132" y2="125.5"/>
+			</g>
+		</g>
+		</svg>
+
+	</div>
+	<nav id="home-men" class="home-menu">
+		<a href="about.html">About</a>
+		<a href="botanical-illustrations.html">Botanical Illustrations</a>
+		<a href="data-visualisations.html">Data Visualisations</a>
+		<a href="other-work.html">Other Work</a>
+	</nav>
+
+	<script type="text/javascript">
+
+	function menu(){
+		document.getElementById('home-men').style.display = "block";
+		d3.select("#menIcon").transition().duration(300).style("opacity","0").style("pointer-events","none");
+	}
+
+	resizeFunction();
+	function resizeFunction(){
+		voron();
+		/*
+		var vpHight = window.inneHeight;
+		var vpWidth = window.innerWidth;
+
+		// dynamic posistioning of the Name box at the center of the page (horizontally)
+		var nb = document.getElementsByClassName('name-box')[0];
+//		console.log(nb);
+		var nbWidth = nb.offsetWidth;
+//		console.log(nbWidth);
+		var nbPos = vpWidth / 2 - nbWidth/2;
+//		console.log(nbPos);
+		nb.style.marginLeft = nbPos+"px";
+
+		var treesize = document.getElementById("trees");
+		treesize.style.width = vpWidth;
+		treesize.style.hight = vpHight;
+*/
+	}
+	</script>
+
+</body>

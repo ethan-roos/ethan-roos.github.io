@@ -1,0 +1,593 @@
+
+/* Home Page & Top Menus*/
+html, body {
+  margin:  0;
+  height: 100%;
+}
+
+div.name-box {
+	position: fixed;
+	top: 9%;
+	background-color: white;
+	height: auto;
+	width: 30%;
+	border: 3px solid black;
+	padding: 1% 3%;
+	text-align: center;
+	left: 32%;
+	border-radius: 2px;
+}
+
+/* Namebox small screen resizing */
+
+
+h1 {
+	font-size: 350%;
+	font-family: 'Amatic SC', sans-serif;
+	margin: 0px;
+	letter-spacing: 0.15em;
+}
+
+nav.home-menu {
+	display: none;
+	position: fixed;
+	bottom: 4%;
+	left: 10%;
+	width: 80%;
+	height: auto;
+	margin:auto;
+	background-color: white;
+	border: 2px solid black;
+	text-align: center;
+	border-radius: 1px;
+	-webkit-animation-name: homeMen;
+	 -webkit-animation-duration: 0.4s;
+	 animation-name: homeMen;
+	 animation-duration: 0.4s
+}
+
+@-webkit-keyframes homeMen {
+		from {left: -90%; opacity: 0}
+		to {left: 10%; opacity: 1}
+}
+
+
+nav.home-menu a{
+	display: inline;
+	font-family: 'Quando', sans-serif;
+	text-decoration: none;
+	color: black;
+	font-size: 1.5em;
+	margin: 0.6em;
+	white-space: nowrap;
+}
+#menIcon {
+	position: fixed;
+	height:11%;
+	width: 11%;
+	bottom: 2%;
+	left:0.5%;
+	z-index: 1;
+	cursor: pointer;
+}
+
+div.voron {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
+#trees {
+	position: fixed;
+	height:100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-image: url('images/Trees3.svg');
+	background-size: cover;
+}
+
+div.gen-men {
+	width: 60%;
+	margin: auto;
+	max-width: 755px;
+	/*border: 1px dotted black;*/
+	text-align: center;
+
+}
+
+div.gen-men a {
+	padding-left: 1%;
+	padding-right: 1%;
+	text-decoration: none;
+	color: black;
+	font-family: 'Quando', "Times", serif;
+	font-size: 0.9em;
+}
+
+body.genbod {
+	background-image: url("images/treeBack.svg");
+	background-size: cover;
+	background-attachment: fixed;
+	pointer-events: all;
+}
+
+#menSelect {
+	width: 100%;
+	height: 22%;
+}
+
+.gen-men path {
+	stroke: black;
+	stroke-width: 1;
+	fill: none;
+	stroke-linejoin: round;
+
+}
+.gen-men text{
+	font-family: 'Quando', "Times", serif;
+	font-size: 0.6em;
+}
+
+
+svg.trees g {
+	pointer-events: none;
+}
+svg.trees {
+	pointer-events: none;
+}
+svg.trees path {
+	pointer-events: none;
+}
+
+g.branches path {
+	fill: black;
+
+}
+g.background path {
+	fill: #faf9fc;
+}
+div.trees {
+	pointer-events: none;
+}
+@media screen and (max-width: 700px) {
+	.gen-men text{
+		font-size: 0.65em;
+	}
+
+}
+
+p {
+	font-family: 'Khula', "Avenir", sans-serif;
+
+}
+
+.blurb a {
+	color: black;
+}
+/* About page ///////////////////////////////////////////*/
+
+
+
+
+/* Bot Illustration /////////////////////////////////////*/
+#bot-head-all {
+	border-top: 0.5px solid #8b8ba0;
+	border-bottom: 0.5px solid #8b8ba0;
+}
+
+#bot-head-top {
+	min-height: 130px;
+	height: 33%;
+	background-image: url("images/top.jpg");
+	background-repeat: no-repeat;
+  background-size: cover;
+	background-position: bottom;
+}
+#bot-head-bot {
+	height: 33%;
+	min-height: 70px;
+	background-image: url("images/bottom.jpg");
+	background-repeat: no-repeat;
+  background-size: cover;
+	background-position: top;
+}
+
+#bot-head-blurb {
+	background-color: white;
+	padding: 0% 5% 5%;
+/*	border-top: 0.5px solid #eeedef;*/
+	border-bottom: 0.25px solid #8b8ba0;
+
+}
+
+#bot-head-blurb h2 {
+	margin: 0%;
+	/*text-align: center;*/
+	font-size: 280%;
+}
+
+
+
+.bot-row {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	width: 100%;
+
+}
+
+.bot-row img {
+		flex-direction: row;
+		flex-shrink: 1;
+    margin-top: 8px;
+		height: 100%;
+		max-width: 100%;
+		cursor: pointer;
+
+
+}
+/* Bot modal window*/
+#botil-mod-all {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top:0;
+	height: 100%;
+	width: 100%;
+
+}
+#botil-modal {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	max-height: 50%;
+	padding: 1%;
+	background-color: #eeedef;
+	border-top: 0.25px solid #8b8ba0;
+	overflow: auto;
+	-webkit-animation-name: slideIn;
+	 -webkit-animation-duration: 1s;
+	 animation-name: slideIn;
+	 animation-duration: 1s
+}
+@-webkit-keyframes slideIn {
+    from {bottom: -20%; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -20%; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+
+#bot-mod-thumb {
+	max-width: 20%;
+	width: auto;
+	margin: 2% 2% 2% 5%;
+	height: auto;
+	max-height: 250px;
+	display: inline;
+	vertical-align: top;
+	border: 0.25px solid white;
+}
+#bot-mod-text{
+	display: inline-block;
+	vertical-align: top;
+	background-color: #eeedef;
+	padding: 1.4%;
+	width: 50%;
+	margin-left: 2%;
+
+}
+#bot-mod-text h5 {
+	font-family: 'Cormorant Garamond', sans-serif;
+	font-style: italic;
+	font-size: 1.5em;
+	padding: 0.2em;
+	border-bottom: 1px solid black;
+	margin: 0;
+}
+#medium-size {
+	margin-top: 0;
+}
+#bot-mod-text a {
+	color: black;
+}
+
+
+/* Data Vis //////////////////////////////////////////*/
+#month-slider {
+	position: relative;
+	width: 70%;
+	margin-left: 13%;
+	margin-top: 5%;
+}
+
+#controls, #full-fig{
+		display: inline-block;
+		vertical-align: top;
+
+}
+#controls {
+	width: 16%;
+}
+#map {
+	width: 100%;
+
+}
+
+#seasons{
+	width:76%;
+	margin-left: 12%;
+	position: absolute;
+	bottom: 0%;
+}
+
+#seasons h3 {
+	display: inline-block;
+	margin: 4%;
+	color: #fff9e1;
+}
+
+
+#heatDiv {
+	position: absolute;
+	bottom: -15%;
+	width: 80%;
+	margin-left: 10%;
+	pointer-events: none;
+}
+
+rect.handle{
+	fill: #8b8ba0;
+}
+
+svg text{
+	font-family: 'Khula', "Avenir", sans-serif;
+}
+.content-data p {
+	font-family: 'Khula', "Avenir", sans-serif;
+}
+
+.content-data h3 {
+	font-family: 'Cormorant Garamond', sans-serif;
+	cursor: pointer;
+}
+
+
+div.content-data {
+	margin: auto;
+	width: 92%;
+	max-width: 955px;
+	background-color: white;
+	border: 0.5px solid #eeedef;
+	/*remove later!!!!!!!!!!!!!!!!!!!!!!*/
+	min-height: 800px;
+}
+
+
+div.blurb {
+	padding: 3% 6%;
+}
+h2 {
+	font-family: 'Cormorant Garamond', sans-serif;
+font-style: italic;
+/*	letter-spacing: 6px;*/
+	font-size: 250%;
+
+}
+#fig-and-controls {
+	position: relative;
+	margin-top: 6%;
+	padding-top: 2%;
+	padding-left: 6%;
+	margin-bottom: 6%;
+}
+#fig-and-controls h3{
+	font-size: 140%;
+
+
+}
+#full-fig {
+	position: relative;
+	margin-left: 6%;
+	width: 70%;
+}
+
+div.divider {
+	width: 70%;
+	margin: 12% auto;
+	height: 0;
+	border-bottom: 0.5px solid #8b8ba0;
+}
+
+/* botmap modal window */
+#bot-modal {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s;
+}
+
+#bot-mod-cont {
+position: relative;
+background-color: #94949e;
+width: 60%;
+height: 100%;
+margin-left: 40%;
+border-left: 0.5px solid #a9a9b1;
+-webkit-animation-name: fadeIn;
+-webkit-animation-duration: 0.4s;
+animation-name: fadeIn;
+animation-duration: 0.4s;
+}
+
+#mod-text{
+	padding: 1%;
+	
+}
+
+#mod-text h3{
+	margin:none;
+	font-size: 200%;
+	padding-left: 5%;
+	font-style: italic;
+	color: #faf9fc;
+	font-family: 'Cormorant Garamond', sans-serif;
+}
+
+#sketch {
+	width: 90%;
+	height: 70%;
+	margin: auto;
+	background-repeat: no-repeat;
+  background-size: contain;
+	background-position: center;
+
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/* Seudum fig stuff //////////////*/
+#sedum-all {
+	margin-bottom: 10%;
+}
+#sed-title{
+	font-size: 1.8em;
+	width: 35%;
+	padding-bottom: 1%;
+	margin-bottom: 0.5%;
+	border-bottom: 0.5px solid #8b8ba0;
+}
+#sed-top-view * {
+	margin-top: 0%;
+	display: inline;
+	padding-right: 1em;
+}
+
+#sedum {
+	width: 40%;
+	margin-left: 13%;
+	margin-right: 6%;
+	display: inline-block;
+}
+#sedum g {
+	cursor: pointer;
+}
+#colour-leg {
+	width:9%;
+	display: inline-block;
+
+}
+text.rowLabel {
+	cursor: pointer;
+}
+#sedum-leg {
+	display: inline-block;
+	vertical-align: top;
+	width:25%;
+	padding: 2%;
+}
+
+#sed-leg-head{
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.5em;
+}
+#sedum-heat {
+	width:97%;
+	height:auto;
+	max-height: 300px;
+	margin-left: 3%;
+}
+
+#sedum-tool {
+	position: fixed;
+	text-align: center;
+	font-family: 'Khula', "Avenir", sans-serif;
+	pointer-events: none;
+	background: white;
+	border: 1px solid #eeedef;
+	height:	auto;
+	width: auto;
+	padding: 0.25em 1em;
+}
+
+
+/*Resizing for small screens */
+@media screen and (max-width: 700px) {
+	#controls, #full-fig{
+			display: block;
+			vertical-align: top;
+			width: 100%;
+			margin:auto;
+		}
+
+		#fig-and-controls {
+			padding: 1%;
+
+		}
+		#controls h3 {
+			display: inline;
+			margin:2%;
+		}
+		#seasons h3{
+			margin: 1%;
+			font-size: 100%;
+
+
+		}
+		#controls {
+			position: relative;
+		}
+
+		#controls svg {
+			width: 25%;
+			margin-left: 68%;
+			position: absolute;
+			top: 90%;
+		}
+		#heatDiv {
+			bottom: -30%;
+		}
+
+}
+@media screen and (max-width: 400px) {
+	#controls h3 {
+		display: inline;
+		margin: 2%;
+		font-size: 100%
+	}
+	#seasons h3{
+		margin:1%;
+		font-size: 100%;
+	}
+	#seasons{
+		width:90%;
+		margin-left: 5%;
+		position: absolute;
+		bottom: 0%;
+	}
+
+}
