@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ethan Roos: botanical-illustrations</title>
+		<link href="https://fonts.googleapis.com/css?family=Khula:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Cormorant+Garamond:300i,600|Quando" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+		<script type="text/javascript" src="d3.v4.js"></script>
+		<script type="text/javascript">
+			var pagename = 'botanical-illustrations';
+		</script>
+	</head>
+	<body class="genbod" onresize="generalResize()">
+
+		<div id='getGenMen' class="gen-men">
+			<a href="home.html"><h1>Ethan Roos</h1></a>
+			<div id='menSelect'></div>
+		</div>
+		<script type="text/javascript" src="menuscript.js"></script>
+		<script>
+			generalResize();
+		</script>
+
+			<div id ='bot-cont' class='content-data'>
+
+					<div id='bot-head-top'>
+					</div>
+					<div id='bot-head-blurb'>
+						<h2 class='overimg'> BOTANICAL ILLUSTRATION</h2>
+							<p> Why illustrate plants when you can just take a picture?<br>
+								While it is true that botanical illustration is an acient practice,
+								from medieval herbals to georgian engravings,
+								it still has a place in both modern science and education.</p>
+					</div>
+					<!--
+					<div id='bot-head-bot'>
+					</div>
+				-->
+				<div id ='bot-low-back'>
+					<img id= 'bot-head-roots' src="images/bottom2.jpg" alt='roots'>
+					<div id='botil-lowhalf'>
+					<div id ='botil-lowblurb' class= 'blurb'>
+						<p> Botanical illustrations offer many advantages as a means of conveying plant anatomy, or changes thereof. Illustration allows for a greater control of the focal points of the image and for reducing complexity. An illustration can also easily combine multiple subjects, which might be separated temporally, by condition, or genetics to create a cohesive image encompassing potential anatomical diversity. Finally, illustration offers a much wider range of possible aesthetic styles, making it easier for the image to fit within an existing design or branding, or for images to be designed to fit broader applications, such as interactive and responsive graphics. 
+							<br><br>
+							Bellow are examples of traditional botanical illustrations, measured and drawn from life then painted with watercolours, and looser drawings and prints of plants drawn from life. For interactive graphics, see <a href=data-visualisations.html>data visualisation</a>.
+						</p>
+					</div>
+					<div id='flex-bot-cont'>
+						<div class='bot-row'>
+							<img src="images/botill/Final.jpg" style="width:64.7%" alt="Flowers" onclick="botMod(0)">
+							<img src="images/botill/MeasComp.jpg" style="width:32.3%" alt="Flowers" onclick="botMod(1)">
+						</div>
+						<div class='bot-row'>
+							<img src="images/botill/MeasComp2.jpg" style="width:48.5%" alt="Flowers" onclick="botMod(2)">
+							<img src="images/botill/goodRoots.jpg" style="width:48.5%" alt="Flowers" onclick="botMod(3)">
+						</div>
+						<div class='bot-row'>
+							<img src="images/botill/Unit5b.jpg" style="width:60.65%" alt="Flowers" onclick="botMod(4)">
+							<img src="images/botill/Unit5a.jpg" style="width:36.35%" alt="Flowers" onclick="botMod(5)">
+						</div>
+						<div class='bot-row'>
+							<img src="images/botill/Scan27.jpg" style="width:32.82%" alt="Flowers" onclick="botMod(6)">
+							<img src="images/botill/Scan36.jpg" style="width:64.2%" alt="Flowers" onclick="botMod(7)">
+						</div>
+						<div class='bot-row'>
+							<img src="images/botill/Scan63.jpg" style="width:32%" alt="Flowers" onclick="botMod(8)">
+							<img src="images/botill/Scan53.jpg" style="width:32%" alt="Flowers" onclick="botMod(9)">
+							<img src="images/botill/Scan18.jpg" style="width:32%" alt="Flowers" onclick="botMod(10)">
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<div id='botil-mod-all'>
+			<div id="botil-modal">
+				<img id="bot-mod-thumb">
+				<div id='bot-mod-text'>
+					<h5 id='mod-title'></h5>
+					<p id='medium-size'>text</p>
+					<p id='pic-descrip'> text</p>
+				</div>
+			</div>
+		</div>
+		<script>
+				function botMod(x){
+					d3.csv("botil.csv")
+						.get(function(error, mydata){
+							var pictB= mydata[x];
+							document.getElementById('botil-mod-all').style.display = "block";
+							document.getElementById('bot-mod-thumb').src = pictB.image;
+							document.getElementById('mod-title').innerHTML = pictB.title;
+							document.getElementById('medium-size').innerHTML = pictB.medium+"  •  "+pictB.size;
+							document.getElementById('pic-descrip').innerHTML = pictB.description;
+
+						});
+				}
+				window.onclick = function(event) {
+				    if (event.target == document.getElementById('botil-mod-all')) {
+				        document.getElementById('botil-mod-all').style.display = "none";
+				    }
+				}
+
+
+		</script>
+
+	</body>
+</html>
