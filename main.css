@@ -47,6 +47,7 @@ h1 {
 }
 
 nav.home-menu {
+	z-index: 1;
 	display: none;
 	position: fixed;
 	bottom: 4%;
