@@ -204,7 +204,8 @@ p {
 }
 h2 {
 	font-family: 'Cormorant Garamond', sans-serif;
-font-style: italic;
+	font-style: italic;
+	font-weight: normal;
 /*	letter-spacing: 6px;*/
 	font-size: 250%;
 
