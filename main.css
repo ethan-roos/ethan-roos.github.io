@@ -61,6 +61,7 @@ nav.home-menu {
 	border: 2px solid #666666;
 	text-align: center;
 	border-radius: 1px;
+
 	-webkit-animation-name: homeMen;
 	 -webkit-animation-duration: 0.6s;
 	 animation-name: homeMen;
@@ -70,6 +71,7 @@ nav.home-menu {
 @-webkit-keyframes homeMen {
 		from {left: -90%; opacity: 0}
 		to {left: 10%; opacity: 1}
+
 }
 
 
@@ -181,7 +183,9 @@ div.trees {
 @media screen and (max-width: 700px) {
 	.gen-men text{
 		font-size: 0.65em;
+
 	}
+
 
 }
 
@@ -560,7 +564,11 @@ animation-duration: 0.4s;
 
 /* Seudum fig stuff //////////////*/
 #sedum-all {
-	margin-bottom: 10%;
+	margin-bottom: 7%;
+}
+#sed-fig {
+	display: inline-block;
+	width: 70%;
 }
 #sed-title{
 	font-size: 1.8em;
@@ -576,8 +584,8 @@ animation-duration: 0.4s;
 }
 
 #sedum {
-	width: 40%;
-	margin-left: 13%;
+	width: 50%;
+	margin-left: 20%;
 	margin-right: 6%;
 	display: inline-block;
 }
@@ -585,7 +593,7 @@ animation-duration: 0.4s;
 	cursor: pointer;
 }
 #colour-leg {
-	width:9%;
+	width:11%;
 	display: inline-block;
 
 }
@@ -621,7 +629,24 @@ text.rowLabel {
 	width: auto;
 	padding: 0.25em 1em;
 }
+@media screen and (max-width: 800px) {
 
+			#sed-fig{
+				width: 100%;
+				padding-right: 2%;
+			}
+			#sedum-leg {
+				display: block;
+				margin: auto;
+				width: 90%;
+			}
+			#sedum-leg h4 {
+				font-size: 100%;
+			}
+			#sedum-leg p {
+				font-size: 80%;
+			}
+}
 
 /*Resizing for small screens */
 @media screen and (max-width: 700px) {
@@ -659,6 +684,7 @@ text.rowLabel {
 		#heatDiv {
 			bottom: -30%;
 		}
+
 
 }
 @media screen and (max-width: 400px) {
