@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ethan Roos: botanical-illustrations</title>
 		<link href="https://fonts.googleapis.com/css?family=Khula:300" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Cormorant+Garamond:300i,600|Quando" rel="stylesheet">
@@ -73,7 +74,7 @@
 			</div>
 		</div>
 
-		<div id='botil-mod-all'>
+		<div id='botil-mod-all' onclick="botmodclick()">
 			<div id="botil-modal">
 				<img id="bot-mod-thumb">
 				<div id='bot-mod-text'>
@@ -83,6 +84,7 @@
 				</div>
 			</div>
 		</div>
+
 		<script>
 				function botMod(x){
 					d3.csv("botil.csv")
@@ -96,13 +98,16 @@
 
 						});
 				}
+				function botmodclick() {
+					document.getElementById('botil-mod-all').style.display = "none";
+				}
+				/*
 				window.onclick = function(event) {
 				    if (event.target == document.getElementById('botil-mod-all')) {
 				        document.getElementById('botil-mod-all').style.display = "none";
 				    }
 				}
-
-
+*/
 		</script>
 
 	</body>
