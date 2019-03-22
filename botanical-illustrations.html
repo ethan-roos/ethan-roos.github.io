@@ -22,7 +22,7 @@
 		<script>
 			generalResize();
 		</script>
-
+			<div id='bot-main'>
 			<div id ='bot-cont' class='content-data'>
 
 					<div id='bot-head-top'>
@@ -39,16 +39,20 @@
 					<div id='bot-head-bot'>
 					</div>
 				-->
+
+
 				<div id ='bot-low-back'>
 					<img id= 'bot-head-roots' src="images/bottom2.jpg" alt='roots'>
+				</div>
+
 					<div id='botil-lowhalf'>
-					<div id ='botil-lowblurb' class= 'blurb'>
-						<p> Botanical illustrations offer many advantages as a means of conveying plant anatomy, or changes thereof. Illustration allows for a greater control of the focal points of the image and for reducing complexity. An illustration can also easily combine multiple subjects, which might be separated temporally, by condition, or genetics to create a cohesive image encompassing potential anatomical diversity. Finally, illustration offers a much wider range of possible aesthetic styles, making it easier for the image to fit within an existing design or branding, or for images to be designed to fit broader applications, such as interactive and responsive graphics.
-							<br><br>
-							Bellow are examples of traditional botanical illustrations, measured and drawn from life then painted with watercolours, and looser drawings and prints of plants drawn from life. For interactive graphics, see <a href=data-visualisations.html>data visualisation</a>.
-						</p>
-					</div>
-					<div id='flex-bot-cont'>
+						<div id ='botil-lowblurb' class= 'blurb'>
+							<p> Botanical illustrations offer many advantages as a means of conveying plant anatomy, or changes thereof. Illustration allows for a greater control of the focal points of the image and for reducing complexity. An illustration can also easily combine multiple subjects, which might be separated temporally, by condition, or genetics to create a cohesive image encompassing potential anatomical diversity. Finally, illustration offers a much wider range of possible aesthetic styles, making it easier for the image to fit within an existing design or branding, or for images to be designed to fit broader applications, such as interactive and responsive graphics.
+								<br><br>
+								Bellow are examples of traditional botanical illustrations, measured and drawn from life then painted with watercolours, and looser drawings and prints of plants drawn from life. For interactive graphics, see <a href=data-visualisations.html>data visualisation</a>.
+							</p>
+							</div>
+						<div id='flex-bot-cont'>
 						<div class='bot-row'>
 							<img src="images/botill/Final.jpg" style="width:64.7%" alt="Flowers" onclick="botMod(0)">
 							<img src="images/botill/MeasComp.jpg" style="width:32.3%" alt="Flowers" onclick="botMod(1)">
@@ -70,9 +74,11 @@
 							<img src="images/botill/Scan53.jpg" style="width:32%" alt="Flowers" onclick="botMod(9)">
 							<img src="images/botill/Scan18.jpg" style="width:32%" alt="Flowers" onclick="botMod(10)">
 						</div>
-				</div>
-			</div>
-		</div>
+					</div>
+					</div>
+
+
+
 
 		<div id='botil-mod-all' onclick="botmodclick()">
 			<div id="botil-modal">
@@ -110,5 +116,27 @@
 */
 		</script>
 
+
+	</div>
+</div>
+	<div id ='bot-cont2' class='content-data'>
+		<div id=howmake-d onresize=howsize>
+			<img id="howmake" alt=how_to_make src="images/botprocess-expanded.svg" style="width:100%; height:100%" ></img>
+		</div>
+		<script type="text/javascript">
+		//style="width:100%; height:100%" onresize="howsize()"
+				function howsize(){
+						if(screen.width < 700 || window.innerWidth <700 ){
+
+							document.getElementById('howmake').src = "images/botprocess-mob.svg";
+							console.log("small");
+						}else{
+							document.getElementById('howmake').src = "images/botprocess-expanded.svg";
+						console.log("big")};
+				}
+				howsize();
+				window.addEventListener("resize", howsize);
+		</script>
+	</div>
 	</body>
 </html>
