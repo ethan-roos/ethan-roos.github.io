@@ -735,3 +735,36 @@ text.rowLabel {
 #bloghead h2 {
 	margin-top: 0;
 }
+
+.phoneframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border: none
+}
+.phoframecont {
+	position: relative;
+	min-height: 730px;
+	max-width: 380px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2%
+}
+
+.blogpic {
+	display: block;
+	height: auto;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2%;
+}
+
+.inlinegroup {
+	display: inline-block;
+	width: 50%;
+	margin: auto;
+}
