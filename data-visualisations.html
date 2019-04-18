@@ -1105,16 +1105,18 @@
 								</svg>
 
 							</div>
-							<div id="month-slider">
-							</div>
-							<div id="seasons">
-								<h3 id='wintBut' onclick="cycleSeasons(0)">Winter</h3>
-								<h3 id='spriBut'onclick="cycleSeasons(1)">Spring</h3>
-								<h3 id='summBut'onclick="cycleSeasons(2)">Summer</h3>
-								<h3 id='autuBut'onclick="cycleSeasons(3)">Autumn</h3>
-							</div>
-							<div id='heatDiv'>
-								<svg  id='heatSVG' height="100%" width="100%" style="opacity:0; pointer-events:none;"><g id='heatLegend' ></g></svg>
+							<div id ="botmap-legends">
+								<div id="month-slider">
+								</div>
+								<div id="seasons">
+									<h3 id='wintBut' onclick="cycleSeasons(0)">Winter</h3>
+									<h3 id='spriBut'onclick="cycleSeasons(1)">Spring</h3>
+									<h3 id='summBut'onclick="cycleSeasons(2)">Summer</h3>
+									<h3 id='autuBut'onclick="cycleSeasons(3)">Autumn</h3>
+								</div>
+								<div id='heatDiv'>
+									<svg  id='heatSVG' width="100%" viewBox = "0 0 503 88" style="display:none; pointer-events:none;"><g id='heatLegend' ></g></svg>
+								</div>
 							</div>
 						</div>
 
@@ -1202,6 +1204,7 @@
 								var svg = d3.select("#month-slider").append("svg")
 								    .attr("width", width + margin.left + margin.right)
 								    .attr("height", height + margin.top + margin.bottom)
+										.style("pointer-events","inherit")
 								  .append("g");
 								  //  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -1347,10 +1350,11 @@
 						//make legend
 						function heatLegGen() {
 							var heatLegend = d3.select("#heatLegend");
-							var heatLx = [0,1,2,3,4,5,6,7]
-							var boxwidth = 10*fFpercent
-							var boxheight = 5*fFpercent
-
+							var heatLx = [0,1,2,3,4,5,6,7];
+							var boxwidth = 62.8;//10*fFpercent
+							var boxheight = 31.4;//5*fFpercent
+							console.log(boxwidth);
+							console.log(boxheight);
 							heatLegend.selectAll("rect")
 									.data(heatLx)
 									.enter().append("rect")
@@ -1374,12 +1378,12 @@
 							//add legen Name
 							heatLegend.append("text")
 								.attr("id","heat-leg-title")
-								.attr("x",boxwidth*4.6)
-								.attr("y",boxheight*1.8)
+								.attr("x",boxwidth*4.5)
+								.attr("y",boxheight*2.5)
 								.style("text-anchor", "middle")
-								.style("fill","#666666")
+								.style("fill","black")
 								.style("font-size","1.5em")
-								.style("font-weight","bold")
+							//	.style("font-weight","bold")
 								.text("Number of Months with Sketch");
 
 						}
@@ -1396,12 +1400,13 @@
 
 							if(!(heatClicked)){
 								heatMap();
-								d3.select("#heatSVG").style("opacity","1").style("pointer-events","none");
+								d3.select("#heatSVG").style("display","block").style("pointer-events","none");
 								document.getElementById('legend').innerHTML= heatText;
 								document.getElementById('mapb2').style.textDecoration = "underline";
 								heatClicked = true;
 							}else{
-								d3.select("#heatSVG").style("opacity","0").style("pointer-events","none");
+								d3.select("#heatSVG").style("display","none").style("pointer-events","none");
+								d3.selectAll("#Zones *").style("pointer-events","none");
 								d3.selectAll("#Zones path").style("fill", "white");
 								d3.selectAll("#Buildings *").style("opacity", "1");
 								d3.selectAll("#Water *").style("opacity", "1");
@@ -1410,6 +1415,7 @@
 							}
 
 						}
+						var myZones =[];
 						function heatMap(){
 
 					    d3.csv("zone_data.csv")
@@ -1418,9 +1424,13 @@
 									//		console.log(mydata[i]);
 									//		console.log(mydata[i].name);
 											var zone = mydata[i];
-											d3.select("#"+zone.zone).style("fill", heatScale(Number(zone.noMonths)));
+											var thisZone = d3.select("#"+zone.zone);
+											thisZone.style("fill", heatScale(Number(zone.noMonths)));
 											d3.selectAll("#Buildings *").style("opacity", "0.5");
 											d3.selectAll("#Water *").style("opacity", "0.5");
+										//	d3.selectAll("#Water *, #Trails *, #Buildings *, #Boarder *").style("pointer-events","none");
+										//	thisZone.attr("score",zone.onMonths);
+											//thisZone.on("mouseover", function(i){console.log(i);});
 										}
 
 					    	});
@@ -1429,7 +1439,7 @@
 						//star Map
 						//initialise stuff
 						var starClicked = false;
-						d3.selectAll("#seasons, #seasons *").style("opacity","0").style("pointer-events","none");
+						d3.selectAll("#seasons").style("display","none").style("pointer-events","none");
 						d3.selectAll("#Sky *").style("opacity","0").style("pointer-events","none");
 
 
@@ -1445,7 +1455,7 @@
 							if (!(starClicked)){
 								//make star stuff seen and clickable
 								d3.selectAll("#Sky *").style("opacity","1").style("pointer-events","all");
-								d3.selectAll("#seasons, #seasons *").style("opacity","1").style("pointer-events","all");
+								d3.selectAll("#seasons").style("display","block").style("pointer-events","all");
 								//change colours of other stuff
 								// * * * change when put in real page!!!!!!
 								document.getElementById('fig-and-controls').style.backgroundColor="#2828a3";
@@ -1463,7 +1473,7 @@
 							}else{
 								//undo onclick actions
 								d3.selectAll("#Sky *").style("opacity","0").style("pointer-events","none");
-								d3.selectAll("#seasons,#seasons *").style("opacity","0").style("pointer-events","none");
+								d3.selectAll("#seasons").style("display","none").style("pointer-events","none");
 								//change colours of other stuff
 								// * * * change when put in real page!!!!!!
 								document.getElementById('fig-and-controls').style.backgroundColor="white";
@@ -1507,10 +1517,16 @@
 							d3.selectAll("#Dots , #Dots g").style("opacity", "1");
 							d3.selectAll("#Dots, #Dots g ").style("pointer-events", 'all');
 							scatterMap();
+
+							if (!(scatterClicked)){
+								d3.selectAll('#month-slider *').style("pointer-events","none");
+								console.log("nont scatter");
+							}
 							//resize heatmap legend
+							/*
 							d3.selectAll("#heatLegend *").remove();
 							heatLegGen();
-
+							*/
 							generalResize();
 
 						}
@@ -1560,6 +1576,7 @@
 					</div>
 
 					<script>
+
 						//inialised variables
 						var sedGen = false;
 						var goodGenes = '';
@@ -1583,10 +1600,10 @@
 								document.getElementById('sed-nat-but').style.textDecoration = 'none';
 								sedGen = true;
 								goodGenes = '';
-								if(document.getElementById('sed-heat-svg')){
-									d3.select("#col-leg-svg").remove();
+								if(!(document.getElementById('sed-heat-svg'))){
+									sedumReact();
 								}
-								sedumReact();
+
 
 							}else{
 								document.getElementById('Colour-View').style.opacity = 1;
@@ -1628,6 +1645,7 @@
 										top: 50, right: 50, left:60, bottom:50
 									}
 									var svg = d3.select('#sedum-heat')
+
 										.append("svg")
 											.attr("id","sed-heat-svg")
 											.attr("viewBox", "0 0 550 220")
@@ -1690,7 +1708,7 @@
 									var legSVG = d3.select("#colour-leg")
 										.append("svg")
 											.attr("id","col-leg-svg")
-											.attr("viewBox", "0 0 88 507")
+											.attr("viewBox", "0 0 90 507")
 											.attr("width", "100%")
 											.attr("height","100%")
 										.append("g")
@@ -1848,7 +1866,7 @@
 
 											var workingactive = activetis;
 
-											//console.log(workingactive);
+											console.log(workingactive);
 											if(workingactive.search(tis) < 0) {
 												//switch to colour diagram
 												switch (tis) {
@@ -1882,7 +1900,7 @@
 												}
 												d3.selectAll("#heat-rects rect").style("opacity","0.2").style("stroke","white");
 												var whichgenes = goodGenes.slice(1);
-											//	console.log(whichgenes);
+												console.log(whichgenes);
 												d3.selectAll(whichgenes).style("opacity","1").style("stroke","black");
 												whichLabels = whichgenes.replace(/\./g,"#");
 												d3.selectAll(whichLabels).style("font-weight","bold");
@@ -1921,6 +1939,7 @@
 
 												d3.selectAll("#heat-rects rect").style("opacity","0.2").style("stroke","white");
 												var whichgenes = goodGenes.slice(1);
+												console.log(whichgenes);
 												//case if nothing is selected
 
 												if(!(whichgenes)){
@@ -1933,6 +1952,7 @@
 												}else{
 													d3.selectAll(whichgenes).style("opacity","1").style("stroke","black");
 													whichLabels = whichgenes.replace(/\./g,"#");
+													d3.selectAll("text.rowLabel").style("font-weight","normal");
 													d3.selectAll(whichLabels).style("font-weight","bold");
 													//console.log("at least one tis act");
 												}
@@ -2030,10 +2050,6 @@
 						///// Hover function////
 						/////////////////////////
 						//backup for touch screens
-						function sedtoolclick() {
-							document.getElementById('sedum-tool').style.display = "none";
-						}
-
 
 						function sedumHover(tis, event){
 

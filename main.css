@@ -425,8 +425,17 @@ div.content-data {
 
 
 /* Data Vis //////////////////////////////////////////*/
-#month-slider {
+#botmap-legends {
 	position: relative;
+	width: 100%;
+	height: auto;
+	min-height: 50px;
+	margin-top: 2%;
+}
+
+
+#month-slider {
+	position: absolute;
 	width: 70%;
 	margin-left: 13%;
 	margin-top: 5%;
@@ -446,10 +455,9 @@ div.content-data {
 }
 
 #seasons{
-	width:76%;
-	margin-left: 12%;
-	position: absolute;
-	bottom: 0%;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #seasons h3 {
@@ -460,11 +468,12 @@ div.content-data {
 
 
 #heatDiv {
-	position: absolute;
-	bottom: -15%;
 	width: 80%;
 	margin-left: 10%;
 	pointer-events: none;
+	top: 0;
+	height: auto;
+
 }
 
 rect.handle{
@@ -494,6 +503,7 @@ font-style: italic;
 	padding-top: 2%;
 	padding-left: 6%;
 	margin-bottom: 6%;
+
 }
 #fig-and-controls h3{
 	font-size: 140%;
@@ -580,6 +590,7 @@ animation-duration: 0.4s;
 /* Seudum fig stuff //////////////*/
 #sedum-all {
 	margin-bottom: 7%;
+	position: relative;
 }
 #sed-fig {
 	display: inline-block;
@@ -634,7 +645,7 @@ text.rowLabel {
 }
 
 #sedum-tool {
-	position: fixed;
+	position: absolute;
 	text-align: center;
 	font-family: 'Khula', "Avenir", sans-serif;
 	pointer-events: none;
@@ -680,12 +691,8 @@ text.rowLabel {
 			display: inline;
 			margin:2%;
 		}
-		#seasons h3{
-			margin: 1%;
-			font-size: 100%;
 
 
-		}
 		#controls {
 			position: relative;
 		}
@@ -702,19 +709,25 @@ text.rowLabel {
 
 
 }
+@media screen and (max-width: 500px){
+	#seasons h3{
+		margin:1%;
+		font-size: 150%;
+	}
+}
 @media screen and (max-width: 400px) {
 	#controls h3 {
 		display: inline;
 		margin: 2%;
-		font-size: 100%
+		font-size: 110%
 	}
 	#seasons h3{
 		margin:1%;
-		font-size: 100%;
+		font-size: 110%;
 	}
 	#seasons{
-		width:90%;
-		margin-left: 5%;
+		width:95%;
+		margin-left: auto;
 		position: absolute;
 		bottom: 0%;
 	}
