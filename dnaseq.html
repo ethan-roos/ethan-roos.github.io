@@ -268,14 +268,29 @@
 			window.onscroll = function() {scrollfunc();};
 			var noscroll = true;
 			function scrollfunc(){
-				//console.log(document.body.scrollTop);
 
-				var sec1 = document.getElementById('sec1').scrollHeight;
-				if (document.body.scrollTop > sec1 + sec1/30 && noscroll){
+				//var sec1 = document.getElementById('sec1').scrollHeight;
+				//console.log(sec1);
+				var boundbox = document.getElementById('trelet').getBoundingClientRect();
+				//console.log(boundbox.top);
+				if (
+					boundbox.bottom <= (window.innerHeight || document.documentElement.clientHeight) && noscroll){
+					firstRound();
+					noscroll = false;
+					//console.log("yes");
+
+				}else{
+					//console.log("no");
+				}
+
+
+
+				/*if ((document.body.scrollTop || window.pageYOffset)> sec1 + sec1/30 && noscroll){
 					firstRound();
 					console.log('animation start');
 					noscroll = false;
 				}
+				*/
 
 			}
 		</script>
