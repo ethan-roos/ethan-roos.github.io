@@ -2,15 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0; user-scalable=0;">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>Ethan Roos Interactive Science</title>
-		<meta prefix="og: http://ogp.me/ns#" property="og:title " content="Ethan Roos Interactive Science">
-		<meta prefix="og: http://ogp.me/ns#" property="og:description" content="Interactive designer & science illustrator open for commissions.">
+		<meta prefix="og: http://ogp.me/ns#" property="og:title " content="Ethan Roos Science & Nature">
+		<meta prefix="og: http://ogp.me/ns#" property="og:description" content="Science & nature illustrator open for commissions.">
 		<meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://ethan-roos.github.io/thumbnail.jpg">
 		<link rel="stylesheet" type="text/css" href="mainv2.css">
 		<script src="lottie.min.js"></script>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600;700&display=swap" rel="stylesheet">
 		<script type="text/javascript">
+
 
 			/*
 			//image hover events
@@ -43,363 +46,429 @@
 		<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 	</head>
 	<body>
-		<div id="land-anim">
-			<div id="la-player">
-			</div>
-			<script>
-				lottie.loadAnimation({
-				container: document.getElementById('la-player'),
-				renderer: 'svg',
-				loop: false,
-				autoplay: true,
-				path: 'data.json',
-				rendererSettings: {
-					preserveAspectRatio: 'xMidYMid slice',
-					progressiveLoad: true,
-					id: "line-flower"
-				}})
-				/*
-				if( screen.width < 700){
-						lottie.loadAnimation({
-			      container: document.getElementById('la-player'),
-			      renderer: 'svg',
-			      loop: false,
-			      autoplay: true,
-			      path: 'data.json',
-						rendererSettings: {
-							preserveAspectRatio: 'xMaxYMin slice',
-	    				progressiveLoad: true,
-							id: "line-flower"
-						}})
-					console.log("small screen");
-				}else{
-						lottie.loadAnimation({
-			      container: document.getElementById('la-player'),
-			      renderer: 'svg',
-			      loop: false,
-			      autoplay: true,
-			      path: 'data.json',
-						rendererSettings: {
-							preserveAspectRatio: 'xMidYMid slice',
-	    				progressiveLoad: true,
-							id: "line-flower"
-						}})
-					console.log("big screen");
-				}
-				*/
+		<div id="notmod">
+			<div id="land-anim">
+				<div id="la-player">
+				</div>
+				<script>
+					lottie.loadAnimation({
+					container: document.getElementById('la-player'),
+					renderer: 'svg',
+					loop: false,
+					autoplay: true,
+					path: 'data.json',
+					rendererSettings: {
+						preserveAspectRatio: 'xMidYMid slice',
+						progressiveLoad: true,
+						id: "line-flower"
+					}})
+					/*
+					if( screen.width < 700){
+							lottie.loadAnimation({
+				      container: document.getElementById('la-player'),
+				      renderer: 'svg',
+				      loop: false,
+				      autoplay: true,
+				      path: 'data.json',
+							rendererSettings: {
+								preserveAspectRatio: 'xMaxYMin slice',
+		    				progressiveLoad: true,
+								id: "line-flower"
+							}})
+						console.log("small screen");
+					}else{
+							lottie.loadAnimation({
+				      container: document.getElementById('la-player'),
+				      renderer: 'svg',
+				      loop: false,
+				      autoplay: true,
+				      path: 'data.json',
+							rendererSettings: {
+								preserveAspectRatio: 'xMidYMid slice',
+		    				progressiveLoad: true,
+								id: "line-flower"
+							}})
+						console.log("big screen");
+					}
+					*/
 
-			</script>
-			<div id="Title">
-				<h1>ETHAN ROOS</h1>
-				<h3>Science Interactives<br>And Illustrations</h3>
-				<div id="explore" onclick="explore()" onmouseover="exploreOn()" onmouseout="exploreOut()"><h4 id='expl-text'>Explore</h4></div>
+				</script>
+				<div id="Title">
+					<h1>ETHAN ROOS</h1>
+					<h3>Science Interactives<br>And Illustrations</h3>
+					<div id="explore" onclick="explore()" onmouseover="exploreOn()" onmouseout="exploreOut()"><h4 id='expl-text'>Explore</h4></div>
+				</div>
 			</div>
-		</div>
-		<div id="mid-sheet"></div>
-		<div id="bot-sheet"></div>
+			<div id="mid-sheet"></div>
+			<div id="bot-sheet"></div>
 
-		<div class="blurb" id="first-cont">
-			<div class ="blurb-img">
-				<img id="me" src="me.jpeg" alt="Photo of Ethan Roos">
-			</div>
-			<div class ="blurb-text">
-				<div class="blurb-title">
-					<h3>Getting Personal</h3>
+
+			<div class="blurb" id="first-cont">
+				<div class ="blurb-img">
+					<img id="me" src="me.jpeg" alt="Photo of Ethan Roos">
 				</div>
-				<hr>
-				<div class="blurb-para">
-					<p>I create illustrations and interactive experiences designed to be engaging, tactile, and inclusive. I have a diverse background covering <span id="edlink" onclick="edlink()">education technology</span>, scientific illustration, user experience/interface design, and data visualisation, but what runs through all is the desire to make knowledge accessible and beautiful through visual storytelling. My work revolves heavily around my love of nature and my desire to connect others with its mysteries and small joys before too much is lost. Clients include DK Publishing, The Macallan Scotch Whisky, Bompas & Parr, and Maine Audubon.</p>
-				</div>
-			</div>
-		</div>
-		<div class="tile-grid">
-			<div class="tile">
-				<img class="tile-img" src="personal/laughinggull-s.jpg" alt='Vernal Goo ID Guide' data-fullimg="personal/laughinggull.jpg" data-para='Panoramic illustration of laughing gulls <i>(Leucophaeus atricilla)</i> flying over the coast of Maine.{br}{a href="https://www.instagram.com/p/ChdfwPgrFUj/"}Illustration process video{/a}'>
-				<div class="tile-hover">
-					<h2>See More</h2>
+				<div class ="blurb-text">
+					<div class="blurb-title">
+						<h3>Getting Personal</h3>
+					</div>
+					<hr>
+					<div class="blurb-para">
+						<p>I create illustrations and interactive experiences designed to be engaging, tactile, and inclusive. I have a diverse background covering education technology, scientific illustration, user experience/interface design, and data visualisation, but what runs through all is the desire to make knowledge accessible and beautiful through visual storytelling. My work revolves heavily around my love of nature and my desire to connect others with its mysteries and small joys before too much is lost. Clients include DK Publishing, The Macallan Scotch Whisky, Bompas & Parr, and Maine Audubon.</p>
+					</div>
 				</div>
 			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/conifers-s.jpg" alt='Conifer ID Guide' data-fullimg="personal/conifers.jpg" data-para='Dichotomous key to identifying 6 common conifers of the north east, designed in an instagram friendly forma.{br}{a href="https://www.instagram.com/p/CNvqFI5DSMW/"}View IG post{/a}'>
-				<div class="tile-hover">
-					<h2>See More</h2>
+			<div id="personal-grid" class="tile-grid">
+				<div class="tile">
+					<img class="tile-img" src="personal/pride-pack-s.jpg" alt='Northeast Pride Pack' data-fullimg="personal/pride-pack1.jpg,personal/pride-pack2.jpg,personal/pride-pack3.jpg,personal/pride-pack4.jpg,personal/pride-pack5.jpg,personal/pride-pack6.jpg" data-para='Illustration pack for nature centers and gardens celebrating pride, containing 70 different species native to the northeastern United States in every color of the rainbow.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
 				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/eggwar-s.jpg" alt='Egg War Infographic' data-fullimg="personal/eggwar.jpg" data-para='Information and data graphic detailing the plight of a colony of common murres off the coast of 19<sup>th</sup> century San Francisco. Data from U.S. geological survey and contemporary newspapers.{br}{a href="personal/EggWar-ERoos.pdf"}View A4 printout{/a}'>
-				<div class="tile-hover">
-					<h2>See More</h2>
+				<div class="tile">
+					<img class="tile-img" src="personal/laughinggull-s.jpg" alt='Laughing Gulls in Flight' data-fullimg="personal/laughinggull.jpg" data-para='Panoramic illustration of laughing gulls <i>(Leucophaeus atricilla)</i> flying over the coast of Maine.{br}{a href="https://www.instagram.com/p/ChdfwPgrFUj/"}Illustration process video{/a}'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
 				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/Vernal_Goo-s.jpg" alt='Vernal Goo ID Guide' data-fullimg="personal/Vernal_Goo.jpg" data-para='Infographic showing the differences between frog, toad, and salamander eggs, as might be found in a vernal pool. Designed and sized for an instagram post.'>
-				<div class="tile-hover">
-					<h2>See More</h2>
+				<div class="tile">
+					<img class="tile-img" src="personal/migration-map.jpg" alt='Migration Map' data-fullimg="personal/migration-map.jpg" data-para="Map showing the fall migration paths of 8 different species. Made for the Winter 21’/22’ edition of Maine Audubon’s magazine ‘Habitat.’">
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
 				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/Rose_Plume_Moth-s.jpg" alt='Moths and Plants Series' data-fullimg="personal/Rose_Plume_Moth.jpg" data-para='Series of twelve moths and the plants their caterpillars selectively feed on. Each images shows multiple life stages of the moth, and the leaves and reproductive organs of the plant. {br}{a href="https://www.behance.net/gallery/137666809/Moths-Plants"}View Full Series on Behance{/a} '>
-				<div class="tile-hover">
-					<h2>See More</h2>
+				<div class="tile">
+					<img class="tile-img" src="personal/dk-s.jpg" alt='How to Garden When You Rent' data-fullimg="personal/dk1.jpg,personal/dk2.jpg,personal/dk3.jpg,personal/dk4.jpg,personal/dk5.jpg" data-para="Illustrations for Matthew Pottage’s ‘How to Garden When You Rent’ published by DK. Seventeen illustrations were made in a quasi-single-line style.{br}{a href='https://www.penguinrandomhouse.com/books/654254/how-to-garden-when-you-rent-by-matthew-pottage/'}Purchase from DK{/a} ">
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
 				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/skunkcabbage-s.jpg" alt='Maine Woods Species Profiles' data-fullimg="personal/skunkcabbage.jpg" data-para='Series of infographics highlighting different species found in the woods of Maine, including basic information and a range map. Designed and sized for an instagram post.{br}{a href="https://www.behance.net/gallery/148762163/Maine-Woods-Species-Profiles"}View Full Series on Behance{/a} '>
-				<div class="tile-hover">
-					<h2>See More</h2>
+				<div class="tile">
+					<img class="tile-img" src="personal/Rose_Plume_Moth-s.jpg" alt='Moths and Plants Series' data-fullimg="personal/mothplant3.jpg,personal/mothplant4.jpg,personal/mothplant5.jpg,personal/mothplant6.jpg,personal/mothplant7.jpg,personal/mothplant8.jpg,personal/mothplant9.jpg,personal/mothplant10.jpg,personal/mothplant11.jpg,personal/mothplant12.jpg,personal/mothplant13.jpg,personal/mothplant14.jpg" data-para='Series of twelve moths and the plants their caterpillars selectively feed on. Each images shows multiple life stages of the moth, and the leaves and reproductive organs of the plant. {br}{a href="https://www.behance.net/gallery/137666809/Moths-Plants"}View Full Series on Behance{/a} '>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+
+				<div class="tile">
+					<img class="tile-img" src="personal/eggwar-s.jpg" alt='Egg War Infographic' data-fullimg="personal/eggwar.jpg" data-para='Information and data graphic detailing the plight of a colony of common murres off the coast of 19<sup>th</sup> century San Francisco. Data from U.S. geological survey and contemporary newspapers.{br}{a href="personal/EggWar-ERoos.pdf"}View A4 printout{/a}'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/Vernal_Goo-s.jpg" alt='Vernal Goo ID Guide' data-fullimg="personal/Vernal_Goo.jpg" data-para='Infographic showing the differences between frog, toad, and salamander eggs, as might be found in a vernal pool. Designed and sized for an instagram post.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/conifers-s.jpg" alt='Conifer ID Guide' data-fullimg="personal/conifers1.jpg,personal/conifers2.jpg,personal/conifers3.jpg,personal/conifers4.jpg,personal/conifers5.jpg" data-para='Dichotomous key to identifying 6 common conifers of the north east, designed in an instagram friendly format.{br}{a href="https://www.instagram.com/p/CNvqFI5DSMW/"}View IG post{/a}'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/skunkcabbage-s.jpg" alt='Maine Woods Species Profiles' data-fullimg="personal/skunkcabbage.jpg" data-para='Series of infographics highlighting different species found in the woods of Maine, including basic information and a range map. Designed and sized for an instagram post.{br}{a href="https://www.behance.net/gallery/148762163/Maine-Woods-Species-Profiles"}View Full Series on Behance{/a} '>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/nep-1-2-s.jpg" alt='Nepenthes Zine p1-2' data-fullimg="personal/nep-1-2.jpg" data-para='First pages of a science zine about tropical pitcher plants written and illustrated by me.{br}{a href="personal/nep-full.pdf"}Full printable zine{/a} '>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/folding-s.jpg" alt="From Leaf to Pitcher: cutout activity" data-vidone="https://www.youtube.com/embed/jHEV3IwsnQ8" data-para='Part of my Nepethes Zine.{br}{a href="personal/nepenthes_cutout.pdf"}Printable activity sheet{/a}'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/nep-p3-4-s.jpg" alt='Nepenthes Zine p3-4' data-fullimg="personal/nep-3-4.jpg" data-para='{a href="personal/nep-full.pdf"}Full printable zine{/a} '>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/october-skectches-s.jpg" alt='October Sketches' data-fullimg="personal/october-skectches.jpg" data-para='Digital sketches drawn from life as part of an October 2020 Instagram challenge'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/stickers-s.jpg" alt='Spring Stickers' data-fullimg="personal/stickers.jpg" data-para='Vinyl stickers of spring flowers.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/daf.png" alt="Paperwhite Dissection App" data-vidone="https://www.youtube.com/embed/MJhOdhgvaZk" data-para='Prototype for an imaginary flower dissection app (2019), based on a modern art nouveau brand aesthetic .{br}{a href="daff-proto.html"}Clickable Prototype{/a} '>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/maps-s.jpg" alt='Gods at the Botanics' data-fullimg="personal/maps.jpg" data-para='Interactive data visualisation of over a years woth of sketchs at the Royal Botanic Gardens Edinburgh (2018).{br}{a href="data-vis.html"}Full Article{/a} '>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/cert-s.jpg" alt='Cyclamen' data-fullimg="personal/cert.jpg" data-para='Final piece from my Certificate in Botanical Illustration (with distinction).'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="personal/sedum-s.jpg" alt='Stonecrop Genes' data-fullimg="personal/sedum.jpg" data-para='Interactive genetic data visualisation (2018), using dummy data.{br}{a href="data-vis.html"}Full Article{/a} '>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
 				</div>
 			</div>
 
-			<div class="tile">
-				<img class="tile-img" src="personal/nep-1-2-s.jpg" alt='Nepenthes Zine p1-2' data-fullimg="personal/nep-1-2.jpg" data-para='First pages of a science zine about tropical pitcher plants written and illustrated by me.{br}{a href="personal/nep-full.pdf"}Full printable zine{/a} '>
-				<div class="tile-hover">
-					<h2>See More</h2>
+			<div class="blurb" id="second-cont">
+				<div class ="blurb-img">
+					<img src="ck12.jpg" alt="image">
+				</div>
+				<div class ="blurb-text">
+					<div class="blurb-title">
+						<h3>Education Tech</h3>
+					</div>
+					<hr>
+					<div class="blurb-para">
+						<p><a class="in-text-link" href="https://www.ck12.org/student/">CK-12</a> is a non-profit based in Silicon Valley which specialises in creating interactive digital content for k-12 students studying STEM subjects around the world, with partners including Google and Unicef. When I joined, CK-12 was looking to revitalise its interactive science content, specifically the smaller scale <a class="in-text-link" href="https://interactives.ck12.org/plix/biology/">“PLIX”es</a>, which had an outdated style compared with the rest of the site. These all required custom development, which had led  to a tenfold deficit in science interactives when compared to math. Additionally, CK-12 wanted to simplify its products by pulling PLIX style content into its science lessons for a smoother user experience.<br><br> As  CK-12's  first dedicated Science Interactive Designer & Illustrator I built a design system for new, integrated, and accessible science interactives. This created a clean UI kit consistent with the current CK-12 brand, and also created 10 unique yet highly flexible standard templates for interactives to streamline content creation and development. I worked closely with curriculum experts to design these as well as a number of special case interactives, using my own science background to produce more specialised learning experiences. In total I designed 80+ interactives. Additionally, I created a bright and playful vector-based illustration style, producing scaleable mobile friendly assets with javascript accessible text and symbols for easy globalisation.
+						</p>
+					</div>
 				</div>
 			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/folding-s.jpg" alt="From Leaf to Pitcher: cutout activity" data-vidone="https://www.youtube.com/embed/jHEV3IwsnQ8" data-para='Part of my Nepethes Zine.{br}{a href="personal/nepenthes_cutout.pdf"}Printable activity sheet{/a}'>
-				<div class="tile-hover">
-					<h2>See More</h2>
+			<div class="tile-grid">
+				<div class="tile">
+					<img class="tile-img" src="ck-12/atom.png" alt="Timeline of Atom" data-vidone="https://www.youtube.com/embed/VvwmjUaqAkE" data-para="Video asset for high school chemistry interactive showing evolution of atomic model over time.">
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="ck-12/slider.png" alt="Slider Problem Layout" data-vidone="https://www.youtube.com/embed/eB3892tdbqA" data-para='Prototype of an interactive following the standard "Slider Problem" layout. Part of the design system I created for CK-12.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="ck-12/layouts-s.png" alt='Standard Layouts' data-fullimg="ck-12/layouts.png" data-para='Diffent standard layouts for interactive content, part of the design system I created for CK-12. Further specs and user flows available on request.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="ck-12/eco-levels.png" alt="Ecological Levels" data-vidone="https://www.youtube.com/embed/DzXr0zL65PQ" data-para="Prototype of an interactive for high school biology, showing hierarchy and scale.">
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="ck-12/space-s.jpg" alt='Space Assets' data-fullimg="ck-12/space.png" data-para='For middle school earth science.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="ck-12/carbon.png" alt="Carbon Cycle" data-vidone="https://www.youtube.com/embed/bpoxczKKzwU" data-para='Prototype from middle school earth science. Example of the "Highlight" standard layout.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="ck-12/matching-s.png" alt='Matching UI' data-fullimg="ck-12/matching.png" data-para='UI elements from "Matching" standard interactive type. Matching tiles had to suoport multiple content types and combinations. Further specs and user flows available on request.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile">
+					<img class="tile-img" src="ck-12/chempng-s.png" alt='Chemistry Assets' data-fullimg="ck-12/chempng.png" data-para='Sundry assets from high school chemistry.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile last-tile">
+					<img class="tile-img" src="ck-12/bio-s.jpg" alt='Biology Assets' data-fullimg="ck-12/bio.png" data-para='Sundry assets from high school biology.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
 				</div>
 			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/nep-p3-4-s.jpg" alt='Nepenthes Zine p3-4' data-fullimg="personal/nep-3-4.jpg" data-para='{a href="personal/nep-full.pdf"}Full printable zine{/a} '>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/october-skectches-s.jpg" alt='October Sketches' data-fullimg="personal/october-skectches.jpg" data-para='Digital sketches drawn from life as part of an October 2020 Instagram challenge'>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/stickers-s.jpg" alt='Spring Stickers' data-fullimg="personal/stickers.jpg" data-para='Vinyl stickers of spring flowers.'>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/daf.png" alt="Paperwhite Dissection App" data-vidone="https://www.youtube.com/embed/MJhOdhgvaZk" data-para='Prototype for an imaginary flower dissection app (2019), based on a modern art nouveau brand aesthetic .{br}{a href="daff-proto.html"}Clickable Prototype{/a} '>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/maps-s.jpg" alt='Gods at the Botanics' data-fullimg="personal/maps.jpg" data-para='Interactive data visualisation of over a years woth of sketchs at the Royal Botanic Gardens Edinburgh (2018).{br}{a href="data-vis.html"}Full Article{/a} '>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="personal/cert-s.jpg" alt='Cyclamen' data-fullimg="personal/cert.jpg" data-para='Final piece from my Certificate in Botanical Illustration (with distinction).'>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile last-tile">
-				<img class="tile-img" src="personal/sedum-s.jpg" alt='Stonecrop Genes' data-fullimg="personal/sedum.jpg" data-para='Interactive genetic data visualisation (2018), using dummy data.{br}{a href="data-vis.html"}Full Article{/a} '>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-		</div>
 
-		<div class="blurb" id="second-cont">
-			<div class ="blurb-img">
-				<img src="ck12.jpg" alt="image">
-			</div>
-			<div class ="blurb-text">
-				<div class="blurb-title">
-					<h3>Education Tech</h3>
+			<div class="footer">
+				<h3 style="margin-top:5%;margin-bottom:5%;">Let's Work Together</h3>
+				<div id="icons">
+					<a href="https://www.instagram.com/ethan.h.roos/"><img src="Instagram_icon.svg" alt="Instagram link"></a>
+					<a href="https://theaoi.com/folios/ethan_roos/"><img src="aoi-icon.svg" alt="Association of Illustrators link"></a>
+					<a href="https://www.behance.net/ethanroos"><img src="behance-icon.svg" alt="Behance link"></a>
+					<a href="https://www.linkedin.com/in/ethan-roos-6a424a202/"><img src="linked-icon.svg" alt="LinkedIn link"></a>
 				</div>
-				<hr>
-				<div class="blurb-para">
-					<p><a class="in-text-link" href="https://www.ck12.org/student/">CK-12</a> is a non-profit based in Silicon Valley which specialises in creating interactive digital content for k-12 students studying STEM subjects around the world, with partners including Google and Unicef. When I joined, CK-12 was looking to revitalise its interactive science content, specifically the smaller scale <a class="in-text-link" href="https://interactives.ck12.org/plix/biology/">“PLIX”es</a>, which had an outdated style compared with the rest of the site. These all required custom development, which had led  to a tenfold deficit in science interactives when compared to math. Additionally, CK-12 wanted to simplify its products by pulling PLIX style content into its science lessons for a smoother user experience.<br><br> As  CK-12's  first dedicated Science Interactive Designer & Illustrator I built a design system for new, integrated, and accessible science interactives. This created a clean UI kit consistent with the current CK-12 brand, and also created 10 unique yet highly flexible standard templates for interactives to streamline content creation and development. I worked closely with curriculum experts to design these as well as a number of special case interactives, using my own science background to produce more specialised learning experiences. In total I designed 80+ interactives. Additionally, I created a bright and playful vector-based illustration style, producing scaleable mobile friendly assets with javascript accessible text and symbols for easy globalisation.
-					</p>
-				</div>
+				<p><a href="mailto:ethanhroos@gmail.com">ethanhroos@gmail.com</a></p>
+				<p id="last">© Ethan Roos 2023</p>
 			</div>
-		</div>
-		<div class="tile-grid">
-			<div class="tile">
-				<img class="tile-img" src="ck-12/atom.png" alt="Timeline of Atom" data-vidone="https://www.youtube.com/embed/VvwmjUaqAkE" data-para="Video asset for high school chemistry interactive showing evolution of atomic model over time.">
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="ck-12/slider.png" alt="Slider Problem Layout" data-vidone="https://www.youtube.com/embed/eB3892tdbqA" data-para='Prototype of an interactive following the standard "Slider Problem" layout. Part of the design system I created for CK-12.'>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="ck-12/layouts-s.png" alt='Standard Layouts' data-fullimg="ck-12/layouts.png" data-para='Diffent standard layouts for interactive content, part of the design system I created for CK-12. Further specs and user flows available on request.'>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="ck-12/eco-levels.png" alt="Ecological Levels" data-vidone="https://www.youtube.com/embed/DzXr0zL65PQ" data-para="Prototype of an interactive for high school biology, showing hierarchy and scale.">
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="ck-12/space-s.jpg" alt='Space Assets' data-fullimg="ck-12/space.png" data-para='For middle school earth science.'>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="ck-12/carbon.png" alt="Carbon Cycle" data-vidone="https://www.youtube.com/embed/bpoxczKKzwU" data-para='Prototype from middle school earth science. Example of the "Highlight" standard layout.'>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="ck-12/matching-s.png" alt='Matching UI' data-fullimg="ck-12/matching.png" data-para='UI elements from "Matching" standard interactive type. Matching tiles had to suoport multiple content types and combinations. Further specs and user flows available on request.'>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile">
-				<img class="tile-img" src="ck-12/chempng-s.png" alt='Chemistry Assets' data-fullimg="ck-12/chempng.png" data-para='Sundry assets from high school chemistry.'>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-			<div class="tile last-tile">
-				<img class="tile-img" src="ck-12/bio-s.jpg" alt='Biology Assets' data-fullimg="ck-12/bio.png" data-para='Sundry assets from high school biology.'>
-				<div class="tile-hover">
-					<h2>See More</h2>
-				</div>
-			</div>
-		</div>
 
-		<div class="footer">
-			<h3 style="margin-top:5%;margin-bottom:5%;">Let's Work Together</h3>
-			<div id="icons">
-				<a href="https://www.instagram.com/ethan.h.roos/"><img src="Instagram_icon.svg" alt="Instagram link"></a>
-				<a href="https://theaoi.com/folios/ethan_roos/"><img src="aoi-icon.svg" alt="Association of Illustrators link"></a>
-				<a href="https://www.behance.net/ethanroos"><img src="behance-icon.svg" alt="Behance link"></a>
-				<a href="https://www.linkedin.com/in/ethan-roos-6a424a202/"><img src="linked-icon.svg" alt="LinkedIn link"></a>
-			</div>
-			<p><a href="mailto:ethanhroos@gmail.com">ethanhroos@gmail.com</a></p>
-			<p id="last">© Ethan Roos 2020</p>
-		</div>
+
+	</div>
 		<div id="modal">
 			<span id="close" onclick="modalClose()">&times;</span>
-			 <div id="modal-container">
-				 <img id="modal-image" src="" alt="" onclick="modalClose()">
-				 <iframe id="modal-vid" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			 </div>
-			 <div id="mod-cap">
-				 <h2 id="caption"></h2>
-				 <p id='cap-para'></p>
-		 	 </div>
+			<div id="modalcont">
+				<div id="mod-cap">
+					<h2 id="caption"></h2>
+					<p id='cap-para'></p>
+				</div>
+				 <div id="modal-container">
+
+				 </div>
+
+			</div>
 		</div>
 
 <script type="text/javascript">
 
 
-	//write events functions for html elements
-	let allImages;
+		//write events functions for html elements
+		let allImages;
 
-	//add resize function to update allImages htmlcollection
-	allImages = document.getElementsByClassName('tile-img');
-	console.log(allImages.length);
+		//add resize function to update allImages htmlcollection
+		allImages = document.getElementsByClassName('tile-img');
+		//console.log(allImages.length);
 
-	for (let item of allImages){
-		item.setAttribute("onmouseover", "overF(this)");
-		item.setAttribute("onmouseout", "outF(this)");
-		item.setAttribute("onclick", "modalOpen(this)");
-	};
-
-
-	//image hover events
-	function overF(x) {
-			let hovSib = x.nextElementSibling;
-			hovSib.style.opacity = 1;
-	};
-	function outF(x) {
-			let hovSib = x.nextElementSibling;
-			hovSib.style.opacity = 0;
-	};
-
-	//modal opening
-	function modalOpen(x){
-		outF(x);
-
-		//model element
-		let modimg = document.getElementById('modal-image');
-		let modtext = document.getElementById('caption');
-		let modpara = document.getElementById('cap-para');
-		let modvid = document.getElementById('modal-vid');
-
-		//data
-		let newimg = x.getAttribute("data-fullimg");
-		let para = x.getAttribute("data-para");
-
-		//parse out carrots in para so can have links
-		para = para.replace(/{/g,"<" );
-		para = para.replace(/}/g,">" )
-
-		let vid1 = x.getAttribute("data-vidone");
+		for (let item of allImages){
+			item.setAttribute("onmouseover", "overF(this)");
+			item.setAttribute("onmouseout", "outF(this)");
+			item.setAttribute("onclick", "modalOpen(this)");
+		};
 
 
-		if (newimg) {
-			modimg.style.display = "block";
-			modvid.style.display = "none";
-			modimg.src = newimg;
-		}else {
-			//if vid
-			modimg.style.display = "none";
-			modvid.style.display = "block";
-			//need to add whole soure elements, just changing src doesnt work at all on chrome and doesnt poster on safari
-			modvid.src = vid1+"?rel=0";
+		//image hover events
+		function overF(x) {
+				let hovSib = x.nextElementSibling;
+				hovSib.style.opacity = 1;
+		};
+		function outF(x) {
+				let hovSib = x.nextElementSibling;
+				hovSib.style.opacity = 0;
+		};
+
+		//modal opening
+		function modalOpen(x){
+			outF(x);
+
+			//model element
+			//let modimg = document.getElementById('modal-image');
+			let modtext = document.getElementById('caption');
+			let modpara = document.getElementById('cap-para');
+			let modcont = document.getElementById('modal-container');
+
+			//text
+			let para = x.getAttribute("data-para");
+
+			//parse out carrots in para so can have links
+			para = para.replace(/{/g,"<" );
+			para = para.replace(/}/g,">" )
+
+			//Images
+			//get string of image names
+			let rawlist = x.getAttribute("data-fullimg");
+
+			if (rawlist){
+				let imglist = rawlist.split(',');
+
+				//loop through image list and add new element for each
+				for (let newimg of imglist){
+					let thisimg = document.createElement('img');
+					thisimg.src = newimg;
+					thisimg.className += " modal-image";
+					modcont.appendChild(thisimg);
+				}
+
+			}else {
+				//if vid
+				let vid1 = x.getAttribute("data-vidone");
+				let modvid = document.createElement('iframe');
+				//set attributes
+				modvid.className += " modal-vid";
+				modvid.setAttribute('frameborder','0');
+				modvid.setAttribute("allow", 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+				modvid.setAttribute('allowFullscreen','');
+				//need to add whole soure elements, just changing src doesnt work at all on chrome and doesnt poster on safari
+				modvid.src = vid1+"?rel=0";
+				//append to cont div
+				modcont.appendChild(modvid);
+			}
+
+
+
+			/*
+			let vid1 = x.getAttribute("data-vidone");
+
+
+			if (newimg) {
+				modimg.style.display = "block";
+				modvid.style.display = "none";
+				modimg.src = newimg;
+			}else {
+				//if vid
+				modimg.style.display = "none";
+				modvid.style.display = "block";
+				//need to add whole soure elements, just changing src doesnt work at all on chrome and doesnt poster on safari
+				modvid.src = vid1+"?rel=0";
+
+			}
+			*/
+			//text
+			modtext.innerHTML = x.alt;
+			if (para) {
+				modpara.innerHTML = para;
+			}
+
+			//display modal
+			let mod = document.getElementById('modal');
+			mod.style.display= "block";
+
+			//stop background scroll
+			document.getElementById('notmod').style.overflow="hidden";
+
 
 		}
-		//text
-		modtext.innerHTML = x.alt;
-		if (para) {
-			modpara.innerHTML = para;
+
+		//modal closing
+		function modalClose(){
+			document.getElementById('modal').style.display="none";
+			//reset paragraph text
+			document.getElementById('cap-para').innerHTML="";
+			//remove added elemtns
+			document.getElementById('modal-container').textContent = '';
+			//start background scroll
+			document.getElementById('notmod').style.overflow="auto";
+		};
+
+		//Explore btn//
+		let expl = document.getElementById("explore");
+		let explText = document.getElementById("expl-text");;
+		function explore() {
+			document.getElementById("first-cont").scrollIntoView({behavior: 'smooth'});
+
+		}
+		function exploreOn() {
+			expl.style.backgroundColor = "white";
+			explText.style.color = "#191972";
+		}
+		function exploreOut() {
+			expl.style.backgroundColor = "";
+			explText.style.color = "";
 		}
 
-		//display modal
-		let mod = document.getElementById('modal');
-		mod.style.display= "block";
-
-	}
-
-	//modal closing
-	function modalClose(){
-		document.getElementById('modal').style.display="none";
-		//reset paragraph text
-		document.getElementById('cap-para').innerHTML="";
-	};
-
-	//Explore btn//
-	let expl = document.getElementById("explore");
-	let explText = document.getElementById("expl-text");;
-	function explore() {
-		document.getElementById("first-cont").scrollIntoView({behavior: 'smooth'});
-
-	}
-	function exploreOn() {
-		expl.style.backgroundColor = "white";
-		explText.style.color = "#191972";
-	}
-	function exploreOut() {
-		expl.style.backgroundColor = "";
-		explText.style.color = "";
-	}
-
-	function edlink (){
-		document.getElementById("second-cont").scrollIntoView({behavior: 'smooth'});
-	}
-//exploreOn()" onmouseout="eploreOut()
+		function edlink (){
+			document.getElementById("second-cont").scrollIntoView({behavior: 'smooth'});
+		}
+	//exploreOn()" onmouseout="eploreOut()
 </script>
 
 	</body>
