@@ -168,7 +168,7 @@ div.last-tile{
 /*Landing */
 #land-anim {
 	position: relative;
-	z-index: 20;
+	z-index: 10;
 	width: 100%;
 	height: 100%;
 	background-color: lightblue;
@@ -470,6 +470,56 @@ p.warning {
 	align-self: center;
 
 }
+
+#port-float{
+	z-index: 15;
+	position: fixed;
+	top: 2%;
+	left: 2%;
+	background-color: #191972;
+	border: 2px solid #191972;
+	border-radius: 800px;
+	overflow: auto;
+	vertical-align: middle;
+	padding: 0.5em 0.5em;
+	box-shadow: 0px 3px 10px #1919723E;
+	cursor: pointer;
+	-webkit-transition: width 0.5s;
+	transition: width 0.5s;
+
+}
+#port-float h4 {
+	max-width: 0;
+	display: inline-block;
+	-webkit-transition: color .25s .75s, max-width 1.5s, padding 1.5s;
+	transition: color .25s .75s, max-width 1.5s, padding 1.5s;
+	vertical-align: top;
+	white-space: nowrap;
+	overflow: hidden;
+	color:#191972;
+	padding: 0;
+	pointer-events: none;
+
+  }
+#port-float img {
+	height: 1.5em;
+	display: inline-block;
+	margin-right: -.1em;
+	-webkit-transition: padding 1.5s;
+	transition: padding 1.5s;
+}
+#port-float:active h4, #port-float:hover h4{
+	max-width: 300px;
+	color: white;
+	padding: 0em .5em 0em .6em;
+	pointer-events: all;
+
+}
+#port-float:active img, #port-float:hover img {
+	padding: 0em 0em 0em .3em;
+}
+
+
 
 /*Desktop*/
 @media (min-width: 700px){

@@ -45,7 +45,7 @@
 		</script>
 		<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 	</head>
-	<body>
+	<body ontouchstart="">
 		<div id="notmod">
 			<div id="land-anim">
 				<div id="la-player">
@@ -102,6 +102,11 @@
 			<div id="mid-sheet"></div>
 			<div id="bot-sheet"></div>
 
+			<div id="port-float"> 
+				<img src="port-icon.svg" alt="">
+				<a href="Ethan-Roos-Portfolio-24.pdf"><h4>Printable Portfolio</h4></a>
+			</div> 
+
 
 			<div class="blurb" id="first-cont">
 				<div class ="blurb-img">
@@ -113,7 +118,7 @@
 					</div>
 					<hr>
 					<div class="blurb-para">
-						<p>I create illustrations and interactive experiences designed to be engaging and inclusive. I have a diverse background with education in both botanical illustration and research biology, as well as experience in education technology and user interface design. What runs through all is the desire to make knowledge accessible and beautiful through visual storytelling. My work revolves heavily around my love of nature and my own adventures from the woods of Maine to Antarctic ice floes. I want to help people feel excited by and connected to the natural world around us.</p>
+						<p>I’m a science and nature illustrator, making knowledge of the world accessible and beautiful through visual storytelling is core to what I do. I want to show whats out there and why it matters, even if it's kinda weird. I have a diverse background with education in both botanical illustration and research biology, as well as experience in education technology and user interface design. My work revolves heavily around my love of nature and my own adventures from the woods of Maine to Antarctic ice floes. I want to help people feel excited by and connected to the natural world around us. Clients include DK, Brooklyn Botanical Garden, Maine Audubon, and Macallan scotch whisky.</p>
 					</div>
 				</div>
 			</div>
@@ -127,8 +132,6 @@
 				<div class="tag-button" onclick="selectTags(this)" data-tag="branpr"><h5>Branding &amp; Products</h5></div>
 			</div>
 			<div id="personal-grid" class="tile-grid">
-				
-				
 				<div class="tile botan">
 					<img class="tile-img" src="personal/lichen-s.jpg" alt='The Intimacies of Lichen' data-fullimg="personal/lichen-4.jpg, personal/lichen-3.jpg, personal/lichen-1.jpg, personal/lichen-2.jpg, personal/lichen-5.jpg" data-para='This risograph poster series draws inspiration from one of my hobbies, the macrophotography of lichen. Each 11”x11” or 11”x14” print shows a different detail from lichens I&#39;ve seen while hiking, which in nature may be only a millimetre. Printed in light lime, blue, and fluorescent pink using my own colour separation process.{br}{br} I hope to offer prints for sale in the near future, please email if you&#39;d like to be notified. '>
 					<div class="tile-hover">
@@ -136,6 +139,12 @@
 					</div>
 				</div>
 				
+				<div class="tile anim botan">
+					<img class="tile-img" src="personal/eft-lichen-s.jpg" alt='Eft &amp; Lichen' data-fullimg="personal/eft-lichen.jpg" data-para='Illustration of an eft stage eastern newt and peltigera lichen. Illustrated for risograph printing.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
 				
 				<div class="tile anim">
 					<img class="tile-img" src="personal/thomas-s.jpg" alt='Thomas the Eel &amp; Friends' data-fullimg="personal/thomas.jpg" data-para='Thomas the moray eel ({i}Gymnothorax funebris {/i}) surrounded by tropical Caribbean fish, as seen from a trip to the New England Aquarium. Drawn for risograph printing.'>
@@ -143,12 +152,31 @@
 						<h2>See More</h2>
 					</div>
 				</div>
-				<div class="tile botan edpub">
-					<img class="tile-img" src="personal/lichen-zine-s.jpg" alt='Lichen Sketches Zine' data-fullimg="personal/lichen-zine-1.jpg,personal/lichen-zine-2.jpg,personal/lichen-zine-3.jpg,personal/lichen-zine-4.jpg,personal/lichen-zine-5.jpg,personal/lichen-zine-6.jpg,personal/lichen-zine-7.jpg," data-para='Riso printed zine containing rough sketches which were then developed into my lichen poster series. These are juxtaposed with simple facts about lichen. 5”x5”'>
+				<div class="tile anim intera branpr">
+					<img class="tile-img" src="personal/frogami-s.jpg" alt='Frogami' data-fullimg="personal/frogami.jpg" data-para='Work in progress. Colour test of fully illustrated origami paper. 9 native frog species are shown, and when folded are life size. Final will be risograph printed. Folding pattern also designed by me.'>
 					<div class="tile-hover">
 						<h2>See More</h2>
 					</div>
 				</div>
+				<div class="tile infog edpub">
+					<img class="tile-img" src="personal/edit-mock-s.jpg" alt='Editorial Mockups' data-fullimg="personal/edit-mock-1.jpg,personal/edit-mock-2.jpg,personal/edit-mock-3.jpg,personal/edit-mock-4.jpg" data-para='Previous illustrations reworked as various mock articles and covers.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+				<div class="tile vect branpr anim">
+					<img class="tile-img" src="personal/bbg-tote-s.jpg" alt='BBG Tote Bag' data-fullimg="personal/bbg-tote.jpg" data-para='Members benefit tote bag for Brooklyn Botanic Garden featuring a leaf-cutter bee. 5 colour illustration for silkscreening. Process sketches also shown.'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
+					
+				<!--<div class="tile botan edpub">
+					<img class="tile-img" src="personal/lichen-zine-s.jpg" alt='Lichen Sketches Zine' data-fullimg="personal/lichen-zine-1.jpg,personal/lichen-zine-2.jpg,personal/lichen-zine-3.jpg,personal/lichen-zine-4.jpg,personal/lichen-zine-5.jpg,personal/lichen-zine-6.jpg,personal/lichen-zine-7.jpg," data-para='Riso printed zine containing rough sketches which were then developed into my lichen poster series. These are juxtaposed with simple facts about lichen. 5”x5”'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div> -->
 				<div class="tile branpr vect anim botan">
 					<img class="tile-img" src="personal/pride-pack-s.jpg" alt='Northeast Pride Pack' data-fullimg="personal/pride-pack1.jpg,personal/pride-pack2.jpg,personal/pride-pack3.jpg,personal/pride-pack4.jpg,personal/pride-pack5.jpg,personal/pride-pack7.jpg,personal/pride-pack6.jpg" data-para='Illustration pack for nature centers and gardens celebrating pride, containing 70 different species native to the northeastern United States in every color of the rainbow. Licensed to various nature centers, enquiries welcome.'>
 					<div class="tile-hover">
@@ -302,7 +330,7 @@
 				</div>
 				<p><a href="mailto:ethanhroos@gmail.com">ethanhroos@gmail.com</a></p>
 			
-				<p id="last">© Ethan Roos 2023</p>
+				<p id="last">© Ethan Roos 2024</p>
 
 			</div>
 
