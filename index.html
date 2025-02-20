@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+		<meta name="viewport" content="minimal-ui,width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>Ethan Roos Interactive Science</title>
@@ -14,114 +14,41 @@
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600;700&display=swap" rel="stylesheet">
 		<script type="text/javascript">
 
-
-			/*
-			//image hover events
-	 		function overF(x) {
-					let hovSib = x.nextElementSibling;
-					hovSib.style.opacity = 1;
-			};
-			function outF(x) {
-					let hovSib = x.nextElementSibling;
-					hovSib.style.opacity = 0;
-			};
-
-			//modal opening
-			function modalOpen(x){
-				outF(x);
-				let mod = document.getElementById('modal');
-				let modimg = document.getElementById('modal-image')
-				let modtext = document.getElementById('caption')
-				mod.style.display= "block";
-				modimg.style.backgroundImage = "url('"+x.src+"')";
-				modtext.innerHTML = x.alt;
-			}
-
-			//modal closing
-			function modalClose(x){
-				x.style.display="none"
-			};
-			*/
 		</script>
 		<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 	</head>
 	<body ontouchstart="">
 		<div id="notmod">
-			<div id="land-anim">
-				<div id="la-player">
-				</div>
-				<script>
-					lottie.loadAnimation({
-					container: document.getElementById('la-player'),
-					renderer: 'svg',
-					loop: false,
-					autoplay: true,
-					path: 'data.json',
-					rendererSettings: {
-						preserveAspectRatio: 'xMidYMid slice',
-						progressiveLoad: true,
-						id: "line-flower"
-					}})
-					/*
-					if( screen.width < 700){
-							lottie.loadAnimation({
-				      container: document.getElementById('la-player'),
-				      renderer: 'svg',
-				      loop: false,
-				      autoplay: true,
-				      path: 'data.json',
-							rendererSettings: {
-								preserveAspectRatio: 'xMaxYMin slice',
-		    				progressiveLoad: true,
-								id: "line-flower"
-							}})
-						console.log("small screen");
-					}else{
-							lottie.loadAnimation({
-				      container: document.getElementById('la-player'),
-				      renderer: 'svg',
-				      loop: false,
-				      autoplay: true,
-				      path: 'data.json',
-							rendererSettings: {
-								preserveAspectRatio: 'xMidYMid slice',
-		    				progressiveLoad: true,
-								id: "line-flower"
-							}})
-						console.log("big screen");
-					}
-					*/
-
-				</script>
-				<div id="Title">
-					<h1>ETHAN ROOS</h1>
-					<h3>Science Interactives<br>And Illustrations</h3>
-					<div id="explore" onclick="explore()" onmouseover="exploreOn()" onmouseout="exploreOut()"><h4 id='expl-text'>Explore</h4></div>
+			<div id="thom-box">
+				<img class="thomel scenic" src="anim/background.png" alt="">
+				<img class="thomel" id="thomas" src="anim/thomas.png" alt="">
+				<img class="thomel scenic" src="anim/coral-rocks.png" alt="">
+				<img class="thomel fish"  id="bara" src="anim/baracooda.png" alt="">
+				<img class="thomel fish"  id="black" src="anim/black.png" alt="">
+				<img class="thomel fish"  id="angel" src="anim/angel.png" alt="">
+				<img class="thomel fish"  id="look2" src="anim/lookdown.png" alt="">
+				<img class="thomel fish"  id="look1" src="anim/lookdown.png" alt="">
+				<img class="thomel fish"  id="stripe" src="anim/stripe.png" alt="">
+				<img class="thomel fish"  id="bullet2" src="anim/bullet.png" alt="">
+				<img class="thomel fish"  id="parrot" src="anim/parrot.png" alt="">
+				<div id="title">
+					<h1>ETHAN ROOS</h1><h3>Science &amp Nature <br id="tit-brake">Illustrations</h3>
+				</div>	
+		
+			</div>
+		
+			<div id="floater-cont">
+				<div id="port-float"> 
+					<img src="port-icon.svg" alt="">
+					<a href="Ethan-Roos-Portfolio-24.pdf"><h4>Printable Portfolio</h4></a>
+				</div> 
+				<div id="dsk-scrl">
+					<img src="img-icon.svg" alt="" onclick="explore()">
 				</div>
 			</div>
-			<div id="mid-sheet"></div>
-			<div id="bot-sheet"></div>
-
-			<div id="port-float"> 
-				<img src="port-icon.svg" alt="">
-				<a href="Ethan-Roos-Portfolio-24.pdf"><h4>Printable Portfolio</h4></a>
-			</div> 
 
 
-			<div class="blurb" id="first-cont">
-				<div class ="blurb-img">
-					<img id="me" src="me.jpeg" alt="Photo of Ethan Roos">
-				</div>
-				<div class ="blurb-text">
-					<div class="blurb-title">
-						<h3>Getting Personal</h3>
-					</div>
-					<hr>
-					<div class="blurb-para">
-						<p>I’m a science and nature illustrator, making knowledge of the world accessible and beautiful through visual storytelling is core to what I do. I want to show whats out there and why it matters, even if it's kinda weird. I have a diverse background with education in both botanical illustration and research biology, as well as experience in education technology and user interface design. My work revolves heavily around my love of nature and my own adventures from the woods of Maine to Antarctic ice floes. I want to help people feel excited by and connected to the natural world around us. Clients include DK, Brooklyn Botanical Garden, Maine Audubon, and Macallan scotch whisky.</p>
-					</div>
-				</div>
-			</div>
+			<p class="subhead">Filter projects by category. Click through for more information</p>
 			<div id="filter-btn-cont">
 				<div class="tag-button" onclick="selectTags(this)" data-tag="infog"><h5>Infographics &amp; Displays</h5></div>
 				<div class="tag-button" onclick="selectTags(this)" data-tag="botan"><h5>Botanical</h5></div>
@@ -132,6 +59,12 @@
 				<div class="tag-button" onclick="selectTags(this)" data-tag="branpr"><h5>Branding &amp; Products</h5></div>
 			</div>
 			<div id="personal-grid" class="tile-grid">
+				<div class="tile anim intera branpr">
+					<img class="tile-img" src="personal/frogami-s.jpg" alt='Frogami' data-fullimg="personal/frogami-1.jpg, personal/frogami-2.jpg" data-para='Frogami is a set of illustrated origami paper, that when folded create life-sized models of a frog species native to northeastern America. Custom designed fold pattern fully illustrated top and bottom, printed using spot colour risography. Selected for the Society of Illustrators 67th annual exhibition.  '>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
 				<div class="tile botan">
 					<img class="tile-img" src="personal/lichen-s.jpg" alt='The Intimacies of Lichen' data-fullimg="personal/lichen-4.jpg, personal/lichen-3.jpg, personal/lichen-1.jpg, personal/lichen-2.jpg, personal/lichen-5.jpg" data-para='This risograph poster series draws inspiration from one of my hobbies, the macrophotography of lichen. Each 11”x11” or 11”x14” print shows a different detail from lichens I&#39;ve seen while hiking, which in nature may be only a millimetre. Printed in light lime, blue, and fluorescent pink using my own colour separation process.{br}{br} I hope to offer prints for sale in the near future, please email if you&#39;d like to be notified. '>
 					<div class="tile-hover">
@@ -146,14 +79,8 @@
 					</div>
 				</div>
 				
-				<div class="tile anim">
-					<img class="tile-img" src="personal/thomas-s.jpg" alt='Thomas the Eel &amp; Friends' data-fullimg="personal/thomas.jpg" data-para='Thomas the moray eel ({i}Gymnothorax funebris {/i}) surrounded by tropical Caribbean fish, as seen from a trip to the New England Aquarium. Drawn for risograph printing.'>
-					<div class="tile-hover">
-						<h2>See More</h2>
-					</div>
-				</div>
-				<div class="tile anim intera branpr">
-					<img class="tile-img" src="personal/frogami-s.jpg" alt='Frogami' data-fullimg="personal/frogami.jpg" data-para='Work in progress. Colour test of fully illustrated origami paper. 9 native frog species are shown, and when folded are life size. Final will be risograph printed. Folding pattern also designed by me.'>
+				<div class="tile branpr vect anim botan">
+					<img class="tile-img" src="personal/pride-pack-s.jpg" alt='Northeast Pride Pack' data-fullimg="personal/pride-pack1.jpg,personal/pride-pack2.jpg,personal/pride-pack3.jpg,personal/pride-pack4.jpg,personal/pride-pack5.jpg,personal/pride-pack7.jpg,personal/pride-pack6.jpg" data-para='Illustration pack for nature centers and gardens celebrating pride, containing 70 different species native to the northeastern United States in every color of the rainbow. Licensed to various nature centers, enquiries welcome.'>
 					<div class="tile-hover">
 						<h2>See More</h2>
 					</div>
@@ -170,15 +97,8 @@
 						<h2>See More</h2>
 					</div>
 				</div>
-					
-				<!--<div class="tile botan edpub">
-					<img class="tile-img" src="personal/lichen-zine-s.jpg" alt='Lichen Sketches Zine' data-fullimg="personal/lichen-zine-1.jpg,personal/lichen-zine-2.jpg,personal/lichen-zine-3.jpg,personal/lichen-zine-4.jpg,personal/lichen-zine-5.jpg,personal/lichen-zine-6.jpg,personal/lichen-zine-7.jpg," data-para='Riso printed zine containing rough sketches which were then developed into my lichen poster series. These are juxtaposed with simple facts about lichen. 5”x5”'>
-					<div class="tile-hover">
-						<h2>See More</h2>
-					</div>
-				</div> -->
-				<div class="tile branpr vect anim botan">
-					<img class="tile-img" src="personal/pride-pack-s.jpg" alt='Northeast Pride Pack' data-fullimg="personal/pride-pack1.jpg,personal/pride-pack2.jpg,personal/pride-pack3.jpg,personal/pride-pack4.jpg,personal/pride-pack5.jpg,personal/pride-pack7.jpg,personal/pride-pack6.jpg" data-para='Illustration pack for nature centers and gardens celebrating pride, containing 70 different species native to the northeastern United States in every color of the rainbow. Licensed to various nature centers, enquiries welcome.'>
+				<div class="tile anim">
+					<img class="tile-img" src="personal/thomas-s.jpg" alt='Thomas the Eel &amp; Friends' data-fullimg="personal/thomas.jpg" data-para='Thomas the moray eel ({i}Gymnothorax funebris {/i}) surrounded by tropical Caribbean fish, as seen from a trip to the New England Aquarium. Drawn for risograph printing.'>
 					<div class="tile-hover">
 						<h2>See More</h2>
 					</div>
@@ -240,6 +160,12 @@
 						<h2>See More</h2>
 					</div>
 				</div>
+				<div class="tile vect botan">
+					<img class="tile-img" src="personal/october-skectches-s.jpg" alt='October Sketches' data-fullimg="personal/october-skectches.jpg" data-para='Digital sketches drawn from life as part of an October 2020 Instagram challenge'>
+					<div class="tile-hover">
+						<h2>See More</h2>
+					</div>
+				</div>
 				<div class="tile botan anim vect">
 					<img class="tile-img" src="personal/skunkcabbage-s.jpg" alt='Maine Woods Species Profiles' data-fullimg="personal/skunkcabbage.jpg" data-para='Series of infographics highlighting different species found in the woods of Maine, including basic information and a range map. Designed and sized for an instagram post.{br}{a href="https://www.behance.net/gallery/148762163/Maine-Woods-Species-Profiles"}View Full Series on Behance{/a} '>
 					<div class="tile-hover">
@@ -247,7 +173,7 @@
 					</div>
 				</div>
 				<div class="tile edpub vect botan">
-					<img class="tile-img" src="personal/nep-1-2-s.jpg" alt='Nepenthes Zine p1-2' data-fullimg="personal/nep-1-2.jpg" data-para='First pages of a science zine about tropical pitcher plants written and illustrated by me.{br}{a href="personal/nep-full.pdf"}Full printable zine{/a} '>
+					<img class="tile-img" src="personal/nep-1-2-s.jpg" alt='Nepenthes Zine' data-fullimg="personal/nep-1-2.jpg, personal/nep-3-4.jpg" data-para='First pages of a science zine about tropical pitcher plants written and illustrated by me.{br}{a href="personal/nep-full.pdf"}Full printable zine{/a} '>
 					<div class="tile-hover">
 						<h2>See More</h2>
 					</div>
@@ -258,18 +184,8 @@
 						<h2>See More</h2>
 					</div>
 				</div>
-				<div class="tile edpub vect botan anim">
-					<img class="tile-img" src="personal/nep-p3-4-s.jpg" alt='Nepenthes Zine p3-4' data-fullimg="personal/nep-3-4.jpg" data-para='{a href="personal/nep-full.pdf"}Full printable zine{/a} '>
-					<div class="tile-hover">
-						<h2>See More</h2>
-					</div>
-				</div>
-				<div class="tile vect botan">
-					<img class="tile-img" src="personal/october-skectches-s.jpg" alt='October Sketches' data-fullimg="personal/october-skectches.jpg" data-para='Digital sketches drawn from life as part of an October 2020 Instagram challenge'>
-					<div class="tile-hover">
-						<h2>See More</h2>
-					</div>
-				</div>
+				
+	
 				<div class="tile branpr vect botan">
 					<img class="tile-img" src="personal/stickers-s.jpg" alt='Spring Stickers' data-fullimg="personal/stickers.jpg" data-para='Vinyl stickers of spring flowers.'>
 					<div class="tile-hover">
@@ -288,26 +204,29 @@
 						<h2>See More</h2>
 					</div>
 				</div>
-				<div class="tile intera botan">
-					<img class="tile-img" src="personal/maps-s.jpg" alt='Gods at the Botanics' data-fullimg="personal/maps.jpg" data-para='Interactive data visualisation of over a years woth of sketchs at the Royal Botanic Gardens Edinburgh (2018).{br}{a href="data-vis.html"}Full Article{/a} '>
-					<div class="tile-hover">
-						<h2>See More</h2>
-					</div>
-				</div>
 				<div class="tile botan">
 					<img class="tile-img" src="personal/cert-s.jpg" alt='Cyclamen' data-fullimg="personal/cert.jpg" data-para='Final piece from my Certificate in Botanical Illustration (with distinction).'>
 					<div class="tile-hover">
 						<h2>See More</h2>
 					</div>
 				</div>
-				<div class="tile intera botan">
-					<img class="tile-img" src="personal/sedum-s.jpg" alt='Stonecrop Genes' data-fullimg="personal/sedum.jpg" data-para='Interactive genetic data visualisation (2018), using dummy data.{br}{a href="data-vis.html"}Full Article{/a} '>
-					<div class="tile-hover">
-						<h2>See More</h2>
-					</div>
-				</div>
 				<div class="tile" id="budge" style="display: none"></div>
 				<div id="nothingHere" style="display: none"><p class="warning">No projects match the selected filters</p></div>
+			</div>
+			<div class="blurb">
+				<div class ="blurb-img">
+					<img id="me" src="me.jpeg" alt="Photo of Ethan Roos">
+				</div>
+				<div class ="blurb-text">
+					<div class="blurb-title">
+						<h3>About</h3>
+					</div>
+					<hr>
+					<div class="blurb-para">
+						<p>Ethan Roos (He/They) is a science and nature illustrator currently based in New York City. His work is centred around making the natural world more accessible to a wide audience, striking a balance between careful detail and expressive design. His illustrations are drawn entirely digitally and used for a variety of contexts, including interactive digital and print media. An avid printmaker, he currently publishes may of his illustrations as risograph prints, creating complex spot colour separations. 
+						<br><br>While he originally studied as plant science (BSc), he then went on to train in traditional botanical illustration, achieving certification with distinction. He was the in-house illustrator and interactive designer for the science department at a digital textbook company (CK-12) for over a year, gaining extensive experience in creating content for specific educational goals and ages. He currently works as a freelance illustrator, with a sampling of clients listed below.</p>
+					</div>
+				</div>
 			</div>
 			<h3 style="font-size: 1.3em;">Previous Clients Include</h3>
 			<div id="logo-splash">
@@ -424,25 +343,6 @@
 				modcont.appendChild(modvid);
 			}
 
-
-
-			/*
-			let vid1 = x.getAttribute("data-vidone");
-
-
-			if (newimg) {
-				modimg.style.display = "block";
-				modvid.style.display = "none";
-				modimg.src = newimg;
-			}else {
-				//if vid
-				modimg.style.display = "none";
-				modvid.style.display = "block";
-				//need to add whole soure elements, just changing src doesnt work at all on chrome and doesnt poster on safari
-				modvid.src = vid1+"?rel=0";
-
-			}
-			*/
 			//text
 			modtext.innerHTML = x.alt;
 			if (para) {
@@ -474,7 +374,7 @@
 		let expl = document.getElementById("explore");
 		let explText = document.getElementById("expl-text");;
 		function explore() {
-			document.getElementById("first-cont").scrollIntoView({behavior: 'smooth'});
+			document.getElementById("personal-grid").scrollIntoView({behavior: 'smooth'});
 
 		}
 		function exploreOn() {
