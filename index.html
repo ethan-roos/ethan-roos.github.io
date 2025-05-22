@@ -12,12 +12,9 @@
 		<link rel="stylesheet" type="text/css" href="mainv2.css">
 		<script src="lottie.min.js"></script>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600;700&display=swap" rel="stylesheet">
-		<script type="text/javascript">
-
-		</script>
 		<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 	</head>
-	<body ontouchstart="">
+	<body ontouchstart="" onload="tileCheck()">
 		<div id="notmod">
 			<div id="thom-box">
 				<img class="thomel scenic" src="anim/background.png" alt="">
@@ -470,6 +467,7 @@ function selectTags(x){
 			//remove budge if pres
 			document.getElementById('budge').style.display='none';
 			}
+			tileCheck();
 			//console.log('all visible none filtered');
 			
 		}
@@ -514,9 +512,10 @@ function tileCheck() {
 			
 			
 		}
-	// check if need to budge grid
-	if (Number.isInteger(3*disTiles-1) && disTiles > 1){
+	// check if need to budge grid. Budge only happens on desktop 	if (Number.isInteger(3*disTiles-1) && disTiles > 1){
+	if (disTiles%3==2 && disTiles > 1){
 		document.getElementById('budge').style.display='';
+		
 	}
 	//if no tiles are shown, display message
 	if(disTiles ==0){
