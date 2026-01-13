@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" width="123.13" height="108.18" viewBox="0 0 123.13 108.18"><defs><style>.b{stroke-width:6px;}.b,.c,.d{fill:none;stroke:#fff;stroke-miterlimit:10;}.c{stroke-width:5px;}.d{stroke-width:4px;}</style></defs><rect class="c" x="2.5" y="20.12" width="118.13" height="85.56" rx="1" ry="1"/><path class="b" d="m44.42,20.12V7.62c0-2.55,2.07-4.62,4.62-4.62h25.06c2.55,0,4.62,2.07,4.62,4.62v12.5"/><polyline class="c" points="120.63 39.05 61.56 64.31 2.5 39.05"/><circle class="d" cx="61.56" cy="46.49" r="5"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 123.1 108.2">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 4px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke: #e8d2b9;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        stroke-width: 6px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="a">
+      <rect class="cls-2" x="2.5" y="20.1" width="118.1" height="85.6" rx="1" ry="1"/>
+      <path class="cls-3" d="M44.4,20.1V7.6c0-2.6,2.1-4.6,4.6-4.6h25.1c2.6,0,4.6,2.1,4.6,4.6v12.5"/>
+      <polyline class="cls-2" points="120.6 39 61.6 64.3 2.5 39"/>
+      <circle class="cls-1" cx="61.6" cy="46.5" r="5"/>
+    </g>
+  </g>
+</svg>
