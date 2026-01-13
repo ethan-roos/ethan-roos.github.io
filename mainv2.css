@@ -8,6 +8,7 @@ body{
 	width: 100%;
 	height: 100%;
 	margin: 0%;
+	background-color: #E8D2B9;
 
 }
 
@@ -29,8 +30,8 @@ div.tile-hover{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(25, 25, 114);
-	background-color: rgba(25, 25, 114, 0.6);
+	background-color: rgba(98, 64, 30);
+	background-color: rgba(98, 64, 30, 0.6);
 	display: flex;
  	justify-content: center;
  	align-items: center;
@@ -39,17 +40,13 @@ div.tile-hover{
 	pointer-events: none;
 }
 
-/*
-.tile-hover:hover{
-	z-index: 2;
-}
-*/
 
 h2 {
-	font-family: 'Nunito', sans-serif;
-	font-weight: 600;
+	font-family: "Rubik", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
 	text-align: center;
-	color: white;
+	color: #E8D2B9;
 }
 
 .tile-grid {
@@ -70,9 +67,12 @@ div.tile {
 	width: 48%;
 	padding-top: 48%;
 	position: relative;
-	border: 0.25px solid #ccd1d9;
+	border: 0.25px solid #aa8a6a;
 	margin-top: 2%;
 	margin-bottom: 2%;
+}
+div.tile.wid-boy {
+	width: 96%;
 }
 div.last-tile{
 	display: none;
@@ -102,7 +102,7 @@ div.last-tile{
 	background-color: rgba(25, 25, 114, 0.6);
 	*/
 
-	background-color: rgba(255, 255, 255, 0.93);
+	background-color: rgba(232, 210, 185, 0.93);
 	/*backgrounnd filter fucks video fullscreen on desktop safari*/
 	backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -139,7 +139,7 @@ div.last-tile{
 
 }
 #modal h2, #modal span, #modal p {
-	color: #191972;
+	color: #62401E;
 	text-align: left;
 }
 #mod-cap {
@@ -155,73 +155,66 @@ div.last-tile{
 
 
 #close {
-	font-family: 'Nunito', sans-serif;
+	font-family: 'Space Mono', sans-serif;
   position: absolute;
   top: 0vmin;
   right: 3vmin;
-  color: white;
+  color: #E8D2B9;
   font-size: 40px;
   transition: 0.3s;
 	cursor: pointer;
 }
 
 #title {
-	z-index: 45;
-	position: relative;
+	padding: 3vh;
 	top: 10vh;
 	* {
-		color: white;
-		filter: drop-shadow( 0em .1em .4em rgba(0, 112, 120, 95));
+		color: #62401E;
+		
 	}
 }
-
+.sctn-hd {
+	font-family: "Rubik", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
+}
 
 h1 {
-	font-family: 'Nunito', sans-serif;
-	font-weight: 700;
+	font-family: "Rubik", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
 	font-size: 3.2em;
 	text-align: center;
 	margin: 0
 }
 /*really this should be h2 but I don't want to go through and change*/
 h3 {
-	font-family: 'Nunito', sans-serif;
-	font-weight: 200;
+	font-family: 'Space Mono', sans-serif;
+	font-weight: 400;
 	font-size: 1.8em;
 	text-align: center;
-	color: #191972;
+	color: #62401E;
 	margin: 0
 }
 
 h4 {
-	font-family: 'Nunito', sans-serif;
-	font-weight: 600;
+	font-family: 'Space Mono', sans-serif;
+	font-weight: 400;
 	font-size:1.3em;
 	text-align: center;
-	color: white;
+	color: #E8D2B9;
 	margin: 0
 }
 
 p {
-	font-family: 'Nunito', sans-serif;
-	font-weight: 200;
+	font-family: 'Space Mono', sans-serif;
+	font-weight: 400;
 	font-size: 1em;
 	text-align: left;
-	color: black;
+	color: #62401E;
 }
 
 
-
-#explore {
-	margin-top: 5%;
-	background-color: #191972;
-	border: 2px solid #191972;
-	border-radius: 800px;
-	overflow: auto;
-	padding: 0.4em 6em;
-	box-shadow: 0px 3px 10px #1919723E;
-	cursor: pointer;
-}
 
 
 .blurb {
@@ -239,7 +232,7 @@ p {
 }
 
 hr {
-	border: 1px solid #191972;
+	border: 1px solid #62401E;
 	border-radius: 1px;
 }
 
@@ -261,20 +254,7 @@ hr {
 
 }
 
-#edlink {
-	color: #191972;
-	font-weight: 600;
-	cursor: pointer;
 
-}
-
-/*
-.logo {
-	width: auto;
-	height:2.4em;
-	margin-left: 1.5em
-}
-*/
 .footer {
 
 	display: flex;
@@ -283,24 +263,23 @@ hr {
 
 }
 .footer p {
-	color: #191972;
+	color: #62401E;
 	margin: 0.3em;
 }
 
 #contbut {
-	margin-top: 5%;
-	background-color: #191972;
-	border: 2px solid #191972;
+	
+	background-color: #62401E;
+	border: 2px solid #62401E;
 	border-radius: 800px;
 	overflow: auto;
 	padding: 0.4em 4em;
-	box-shadow: 0px 3px 10px #1919723E;
+	box-shadow: 0px 3px 10px #62401E3E;
 	cursor: pointer;
-	margin-bottom: 10%;
-	margin-top: 15%;
+	
 }
 #contbut h3{
-	color: white;
+	color: #E8D2B9;
 	font-size: 1.5em;
 	font-weight: 500;
 
@@ -313,14 +292,14 @@ hr {
 	background-color: white;
 }
 #contbut:hover h3 {
-	color: #191972;
+	color: #62401E;
 }
 
 .tag-button:hover {
-	background-color: #191972;
+	background-color: #62401E;
 }
 .tag-button:hover h5 {
-	color: white;
+	color: #E8D2B9;
 }
 
 }
@@ -328,7 +307,7 @@ hr {
 
 a {
 	text-decoration: none;
-	color:#191972;
+	color:#62401E;
 
 }
 
@@ -337,11 +316,15 @@ a {
 }
 
 #icons {
+	margin-top: 5%;
 	overflow: auto;
 }
 #icons a{
 	padding: 0 .3em .4em .3em;
 	display: inline-block;
+}
+#icons img {
+	height: 2em;
 }
 
 #last {
@@ -349,7 +332,7 @@ a {
 }
 
 .in-text-link {
-	color: #191972;
+	color: #62401E;
 	font-weight: 600;
 	cursor: pointer;
 
@@ -369,8 +352,8 @@ a {
 	margin-top: 0;
 }
 .tag-button {
-	box-shadow: 0px 2px 7px #1919723E;
-	border: 1px solid #191972;
+	box-shadow: 0px 2px 7px #62401E3E;
+	border: 1px solid #62401E;
 	border-radius: 31px;
 	padding: .4em 1em;
 	overflow: auto;
@@ -381,24 +364,18 @@ a {
 }
 
 h5 {
-	color: #191972;
-	font-family: 'Nunito', sans-serif;
+	color: #62401E;
+	font-family: 'Space Mono', sans-serif;
 	font-weight: 600;
 	font-size: .8em;
 	text-align: center;
 	margin: 0;
 
 }
-.subhead{
-	text-align: center;
-	color: #191972;
-	margin-top: 1.6em;
-	margin-bottom: none;
-}
 
 
 p.warning {
-	color: #C4C2D0;
+	color: #9c754e;
 	padding-left: auto;
 	text-align: center;
 }
@@ -416,7 +393,7 @@ p.warning {
 	max-width: 980px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 2%;
+	margin-bottom: 4%;
 	margin-top: 1%;
 }
 #logo-splash img {
@@ -437,13 +414,13 @@ p.warning {
 #dsk-scrl {
 	display: none;
 	margin-top: 1em;
-	background-color: #191972;
-	border: 1px solid #191972;
+	background-color: #62401E;
+	border: 1px solid #62401E;
 	border-radius: 800px;
 	vertical-align: middle;
 	width: 1.6em;
 	padding: 0.6em 0.6em 0.4em 0.6em;
-	box-shadow: 0px 3px 10px #1919723E;
+	box-shadow: 0px 3px 10px #62401E3E;
 	cursor: pointer;
 	* {
 		height: 1.5em;
@@ -461,13 +438,13 @@ p.warning {
 }
 
 #port-float{
-	background-color: #191972;
-	border: 2px solid #191972;
+	background-color: #62401E;
+	border: 2px solid #62401E;
 	border-radius: 800px;
 	overflow: auto;
 	vertical-align: middle;
 	padding: 0.5em 0.5em;
-	box-shadow: 0px 3px 10px #1919723E;
+	box-shadow: 0px 3px 10px #62401E3E;
 	cursor: pointer;
 	-webkit-transition: width 0.5s;
 	transition: width 0.5s;
@@ -481,7 +458,7 @@ p.warning {
 	vertical-align: top;
 	white-space: nowrap;
 	overflow: hidden;
-	color:#191972;
+	color:#62401E;
 	padding: 0;
 	pointer-events: none;
 
@@ -495,7 +472,7 @@ p.warning {
 }
 #port-float:active h4, #port-float:hover h4{
 	max-width: 300px;
-	color: white;
+	color: #E8D2B9;
 	padding: 0em .5em 0em .6em;
 	pointer-events: all;
 
@@ -504,130 +481,6 @@ p.warning {
 	padding: 0em 0em 0em .3em;
 }
 
-/*Thomas Anim Stuff*/
-#thom-box {
-    display: block;
-    position: relative;
-    height: 100%;
-    width: auto;
-    max-width: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-}
-.thomel {
-    position: absolute;
-}
-.scenic {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    top: 0px;
-    left: 0px
-}
-@keyframes swimRight {
-    0% {
-        left: -48vh;
-    }
-    100% {
-        left: 100%;
-    }
-}
-@keyframes swimLeft {
-    0% {
-        right: -40vh;
-    }
-    100% {
-        right: 200%;
-    }
-}
-@keyframes swimLeft2 {
-    0% {
-        right: -40vh;
-    }
-    100% {
-        right: 100%;
-    }
-}
-@keyframes wiggle {
-	0% {top: 37%;} 
-	50% {top: 35%;}
-	100%{top: 37%;}	
-}
-
-.fish {
-    
-}
-#thomas {
-    height: 53%;
-    left: 8%; 
-    right: 0; 
-    margin-inline: auto; 
-    top: 37%;
-	animation: wiggle 10s ease infinite;
-
-}
-#bara {
-    height: 11%;
-    width: auto;
-    top: 6%;
-    animation: swimRight 14s linear infinite ;
-}
-#black {
-    height: 18%;
-    width: auto;
-    top: -6%;
-    animation: swimRight 14s ease-in-out infinite ;
-    animation-delay: -6s;
-}
-#stripe {
-    height: 9%;
-    width: auto;
-    top: 30%;
-    animation: swimRight 8s linear infinite ;
-    animation-delay: -4s;
-}
-#look1 {
-    height: 16%;
-    width: auto;
-    top: 53%;
-    animation: swimLeft 9s ease-out infinite ;
-}
-#look2 {
-    height: 16%;
-    width: auto;
-    top: 43%;
-    animation: swimLeft 9s ease-out infinite ;
-    animation-delay: -1s;
-}
-#bullet2{
-    height: 14%;
-    width: auto;
-    top: 34%;
-    animation: swimLeft 9s ease-out infinite ;
-    animation-delay: -4.5s;
-}
-#angel {
-    height: 15%;
-    width: auto;
-    top: 70%;
-    animation: swimLeft2 10s ease-in infinite ;
-    animation-delay: -4s;
-}
-#parrot {
-    height: 18%;
-    width: auto;
-    top: 85%;
-    animation: swimRight 16s ease-in infinite ;
-    animation-delay: -9s;
-}
-/*For very tall phones
-@media (min-aspect-ratio: 15/9){
-	#thomas {
-		width: 50%;
-	}
-}
-*/
 
 /*Desktop*/
 @media (min-width: 700px){
@@ -652,7 +505,7 @@ p.warning {
 	}
 
 	.tag-button {
-		box-shadow: 0px 3px 10px #1919723E;
+		box-shadow: 0px 3px 10px #62401E3E;
 		padding: 0.3em 1.5em;
 		margin: .5em .5em;
 	}
@@ -677,33 +530,36 @@ p.warning {
 		width: 31%;
 		padding-top: 31%;
 	}
+	div.tile.wid-boy {
+	width: 65.5%; 
+	}
 	div.last-tile{
 		display: flex;
 	}
 
 	h1 {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 700;
+		font-family: 'Rubik', sans-serif;
+		font-weight: 900;
 		font-size: 4.3em;
 		text-align: center;
-		color: #191972;
+		color: #62401E;
 		margin: 0
 	}
 	h3 {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 200;
+		font-family: 'Space Mono', sans-serif;
+		font-weight: 400;
 		font-size: 2.1em;
 		text-align: center;
-		color: #191972;
+		color: #62401E;
 		margin: 0
 	}
 
 	p {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 200;
+		font-family: 'Space Mono', sans-serif;
+		font-weight: 400;
 		font-size: 1em;
 		text-align: left;
-		color: black;
+		color: #62401E;
 	}
 
 	.blurb {
@@ -738,43 +594,8 @@ p.warning {
 	#budge {
 		display: flex;
 		border: none;
+		height: 1px;
 	}
 
-	#thomas {
-		height: 60%;
-	}
-	#bara {
-		height: 12%;
-		top: 6%;
-	}
-	#black {
-		height: 20%;
-		top: -6%;
-
-	}
-	#stripe {
-		height: 10%;
-		top: 30%;
-	}
-	#look1 {
-		height: 20%;
-		top: 53%;
-	}
-	#look2 {
-		height: 20%;
-		top: 43%;
-	}
-	#bullet2{
-		height: 18%;
-		top: 34%;
-	}
-	#angel {
-		height: 17%;
-		top: 70%;
-	}
-	#parrot {
-		height: 20%;
-		top: 85%;
-	}
-
+	
 }
